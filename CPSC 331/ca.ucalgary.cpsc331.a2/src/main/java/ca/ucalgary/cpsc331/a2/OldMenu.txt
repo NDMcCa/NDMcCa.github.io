@@ -1,0 +1,511 @@
+package ca.ucalgary.cpsc331.a2;
+
+public class RedBlackTree implements Dictionary {
+
+    public Node root;
+    public RedBlackTree() {
+        root = null;
+    }
+
+    // Dictionary Implementation
+    /** Returns if the tree is empty or not */
+    public boolean empty() {
+        return (root == null);
+    }
+
+    /** Inserts a new node into the tree */
+    public boolean insert(int k) {
+        Node node = root;
+        Node parent = null;
+
+        // Tree walk to determine whether this key already exists
+        while (node != null){
+            parent = node;
+            if (k < node.key){
+                node = node.left;
+            }
+            else if (k > node.key){
+                node = node.right;
+            }
+            else {
+                return false;
+            }
+        }
+
+        // If not insert
+        Node newNode = new Node(k);
+        newNode.red = true;
+        if (parent == null){
+            root = newNode;
+        }
+        else if (k < parent.key){
+            parent.left = newNode;
+        }
+        else{
+            parent.right = newNode;
+        }
+        newNode.parent = parent;
+
+        insertFixUp(newNode);
+        return true;
+    }
+
+    /** Deletes a node from the tree */
+    public boolean delete(int k) {
+        Node node = root;
+
+        // Query for the desired node
+        while (node.key != k && node != null){
+            if (k > node.key){
+                node = node.right;
+            }
+            else{
+                node = node.left;
+            }
+        }
+
+        if (node == null) return false;
+
+        //If found initate deletion
+        Node promotedNode;
+        boolean colourDeleted;
+
+        // node has at most one child
+        if (node.right == null || node.left == null){
+            promotedNode = notFullParentDelete(node);
+            colourDeleted = node.red;
+        }
+
+        // node has 2 children
+        else{
+            // Find, copy, and delete the successor
+            Node successor = findMin(node.right);
+            node.key = successor.key;
+            promotedNode = notFullParentDelete(node);
+            colourDeleted = successor.red;
+        }
+
+        if (!colourDeleted){
+            deleteFixUp(promotedNode);
+
+            // Remove temp null node (WHY?)
+            if (promotedNode == null){
+                replaceParentsChild(promotedNode.parent, promotedNode, null);
+            }
+        }
+        return true;
+    }
+
+    /** Queries the tree to see if a node with key "k" exists */
+    public boolean member(int k) {
+        Node node = root;
+        while (node != null){
+            if (k == node.key){
+                return true;
+            }
+            else if (k > node.key){
+                node = node.right;
+            }
+            else{
+                node = node.left;
+            }
+        }
+        return false;
+    }
+
+    // Large subroutines
+    /** Maintains the Red-Black property following insertion if needed */
+    private void insertFixUp(Node node){
+        Node parent = node.parent;
+
+        if (parent == null){
+             node.red = false;
+            return;
+        }
+
+        // If black
+        if (!parent.red && parent != null) {
+            return;
+        }
+
+        // Otherwise red
+        Node grandparent = parent.parent;
+        if (grandparent == null){
+            parent.red = false;
+            return;
+        }
+
+        Node uncle = uncle(parent);
+
+        // Red uncle
+        if (uncle != null && uncle.red == true){
+            parent.red = false;
+            grandparent.red = true;
+            uncle.red = false;
+
+            insertFixUp(grandparent);
+        }
+
+        // Parent is left child of grandparent
+        else if (grandparent.left == parent){
+
+            // Black uncle w/ node left right grandchild of grandparent
+            if(parent.right == node){
+                rotateLeft(parent);
+
+                // The parent will root the rotated subtree and recolour
+                parent = node;
+            }
+
+            // Black uncle and left left grandchild
+            rotateRight(grandparent);
+
+            // Black original parent and red grandparent
+            parent.red = false;
+            grandparent.red = true;
+        }
+
+        // Parent is right child of grandparent
+        else{
+
+            //Black uncle w/ node right left grandchild of grandparent
+            if (parent.left == node){
+                rotateRight(parent);
+
+                parent = node;
+            }
+
+            // Black uncle w/ node right right grandchild of grandparent
+            rotateLeft(grandparent);
+
+            // Black original parent and red grandparent
+            parent.red = false;
+            grandparent.red = true;
+        }
+    }
+
+    /** Maintains the Red-Black property following deletion if needed */
+    private void deleteFixUp(Node node){
+
+        // It is the root
+        if (node == root){
+            node.red = false;
+            return;
+        }
+
+        Node sister = sibling(node);
+
+        // Red sibling
+        if (sister.red){
+            redSibling(node, sister);
+            sister = sibling(node);
+        }
+
+        // Black sibling full parent of black children
+        if (!sister.left.red && !sister.right.red){
+            sister.red = true;
+
+            // A red parent becomes black
+            if (sister.parent.red){
+                sister.parent.red = false;
+            }
+
+            // Black parent recursive call
+            else {
+                deleteFixUp(sister.parent);
+            }
+        }
+
+        // Black sibling with red child
+        else{
+           siblingParentOfRedChild(node, sister);
+        }
+    }
+
+    /** Recolours and rotates if sibling is red */
+    private void redSibling(Node node, Node sister){
+        sister.red = false;
+        sister.parent.red = true;
+        if (node == node.parent.left){
+            rotateLeft(node.parent);
+        }
+        else{
+            rotateRight(node.parent);
+        }
+    }
+
+    /** Does something */
+    private void siblingParentOfRedChild(Node node, Node sister){
+        boolean isLeftChild = node == node.parent.left;
+
+        // Black sibling with red child and uncle to an outer black node
+        if (isLeftChild && !sister.right.red){
+            sister.red = true;
+            sister.left.red = false;
+            rotateRight(sister);
+            sister = node.parent.right;
+        }
+        else if (!isLeftChild && !sister.left.red){
+            sister.red = true;
+            sister.right.red = false;
+            rotateLeft(sister);
+            sister = node.parent.left;
+        }
+
+        // Black sibling with red child and uncle to an outer red node
+        sister.red = sister.parent.red;
+        sister.parent.red = false;
+        if (!isLeftChild){
+           sister.left.red = false;
+           rotateRight(node.parent);
+        }
+        else{
+            sister.right.red = false;
+            rotateLeft(node.parent);
+        }
+
+    }
+
+    /** Does something */
+    private Node notFullParentDelete(Node node){
+
+        // if only left child, replace by left
+        if (node.left != null){
+            replaceParentsChild(node.parent, node, node.left);
+            return node.left;
+        }
+
+        // else if only right child, replace by right
+        else if (node.right != null){
+            replaceParentsChild(node.parent, node, node.right);
+            return node.right;
+        }
+
+        // Otherwise it has no children
+        // Does this thing work and what does it do
+        else{
+            Node newChild;
+            newChild = null;
+            newChild.red = false;
+            replaceParentsChild(node.parent, node, newChild);
+            return newChild;
+        }
+    }
+
+    // Small utility subroutines
+    // What must be done to this
+
+    /** Standard left rotation within a Red-Black tree */
+    private void rotateLeft(Node node){
+        Node nodeY = node.right;
+        node.right = nodeY.left;
+        if (nodeY.left != null){
+            nodeY.left.parent = node;
+        }
+        if (node.parent == null)
+            root = nodeY;
+        else if (node == node.parent.left){
+            node.parent.left = nodeY;
+        }
+        else {
+           node.parent.right = nodeY;
+        }
+        nodeY.left = node;
+        node.parent = nodeY;
+    }
+
+    /** Standard right rotation within a Red-Black tree */
+    private void rotateRight(Node node){
+        Node nodeY = node.left;
+        node.left = nodeY.right;
+        if (nodeY.right != null){
+            nodeY.right.parent = node;
+        }
+        if (node.parent == null)
+            root = nodeY;
+        else if (node == node.parent.right){
+            node.parent.right = nodeY;
+        }
+        else {
+            node.parent.left = nodeY;
+        }
+        nodeY.right = node;
+        node.parent = nodeY;
+    }
+
+//    depricated:
+//    private void rotateRight(Node node){
+//        Node parent = node.parent;
+//        Node rightChild = node.right;
+//        node.right = rightChild.left;
+//        if (rightChild.left != null){
+//            rightChild.left.parent = node;
+//        }
+//        rightChild.left = node;
+//        node.parent = rightChild;
+//
+//        replaceParentsChild(parent, node, rightChild); // ?
+//    }
+
+
+    // Does this do the same thing as attaching?
+    /** Does something */
+    private void replaceParentsChild(Node parent, Node oldChild, Node newChild){
+        if (parent == null){
+            root = newChild;
+        }
+        else if (oldChild == parent.left){
+            parent.right = newChild;
+        }
+        else if (oldChild == parent.right){
+            parent.left = newChild;
+        }
+        else{
+            throw new RuntimeException("The exception");
+        }
+        if (newChild != null){
+            newChild.parent = parent;
+        }
+    }
+
+//    private void rotateRight(Node node){
+//        transplant(tree, k, left(k));
+//        attachLeft(k, right(left(k)));
+//        attachRight(left(k), k);
+//    }
+//    public void attachRoot(ArrayList tree, int k){
+//        if(k != 0){
+//           tree.key = k;
+//           if(k != 0){
+//               parent(k) = 0;
+//           }
+//        }
+//    }
+//
+//    public void attachLeft(int k, int u){
+//        left(u) = k;
+//        if(k != 0){
+//            parent(k) = u;
+//        }
+//    }
+//
+//    public void attachRight(Node node, Node other){
+//        node.right = other;
+//        if(other != null){
+//            other.parent = node;
+//        }
+//    }
+
+    /** Determines the uncle of a given node */
+    private Node uncle(Node parent){
+        Node grandparent = parent.parent;
+        if (parent == grandparent.left){
+            return grandparent.right;
+        }
+        else if (parent == grandparent.right) {
+            return grandparent.left;
+        }
+        else{
+            throw new RuntimeException("nope");
+        }
+    }
+
+    /** Determines the sibling of a given node */
+    private Node sibling(Node node){
+        if (node == node.parent.right){
+            return node.parent.left;
+        }
+        else if (node == node.parent.left){
+            return node.parent.right;
+        }
+        else{
+            return null;
+        }
+    }
+
+    /** Finds the minimum child in the lineage of a node */
+    private Node findMin(Node node){
+        while (node.left != null){
+            node = node.left;
+        }
+        return node;
+    }
+
+    /** Finds the maximum child in the lineage of a node */
+    private Node findMax(Node node){
+        while (node.right != null){
+            node = node.right;
+        }
+        return node;
+    }
+
+    public String colourString(Node node){
+        if (node.red){
+            return "red";
+        }
+        else return "black";
+    }
+
+    public String address(Node node){
+        if (node.parent != null) {
+            if (node == node.parent.right) {
+                return address(node.parent) + "R";
+            } else if (node == node.parent.left) {
+                return address(node.parent) + "L";
+            }
+        }
+        if (node.parent == null) {
+            return "*";
+        }
+        return "";
+    }
+
+    public String insideToString(Node node){
+
+        String insideTreeString = "";
+
+        insideTreeString = insideTreeString + address(node) + ":" + colourString(node) + ":" + node.key + "\n";
+
+        if (node.left != null && node.right != null) {
+            insideTreeString = insideTreeString + insideToString(node.left) + "\n"
+                    + insideToString(node.right) + "\n";
+        }
+        else if(node.left != null) {
+            insideTreeString = insideTreeString + insideToString(node.left) + "\n";
+        }
+        else if (node.right != null) {
+            insideTreeString = insideTreeString + insideToString(node.right) + "\n";
+        }
+        else return insideTreeString;
+        return insideTreeString;
+    }
+
+    //ToString
+    /** Converts the Red-Black tree into a printable String with a specific preorder walk format */
+    public String toString() {
+        String treeString = "";
+        if (empty()) return treeString;
+
+        treeString = address(root) + ":" + colourString(root) + ":" + root.key + "\n";
+
+        if (root.left != null && root.right != null) {
+            treeString = treeString + insideToString(root.left)
+                    + insideToString(root.right);
+        }
+        else if (root.left != null ) {
+            treeString = treeString + insideToString(root.left);
+        }
+        else if (root.right != null) {
+            treeString = treeString + insideToString(root.right);
+        }
+        return treeString;
+    }
+//    public static void main(String[] args){
+//        RedBlackTree rbt = new RedBlackTree();
+//        rbt.insert(60);
+//        rbt.insert(0);
+//        rbt.insert(47);
+//        System.out.println(rbt.toString());
+//
+//    }
+}
