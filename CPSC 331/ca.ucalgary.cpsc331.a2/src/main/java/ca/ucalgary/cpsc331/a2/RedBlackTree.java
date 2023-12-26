@@ -391,21 +391,4 @@ public class RedBlackTree implements Dictionary {
         }
         return "";
     }
-
-//    public static void main(String[] args){
-//        RedBlackTree rbt = new RedBlackTree();
-//        rbt.insert(60);
-//        rbt.insert(0);
-//        rbt.insert(47);
-//        rbt.insert(56);
-//        rbt.insert(2);
-//        rbt.insert(12);
-//        System.out.println(rbt.toString());
-//        rbt.delete(56);
-//        rbt.delete(2);
-//        rbt.delete(12);
-//        System.out.println(rbt.member(60));
-//        System.out.println(rbt.toString());
-//
-//    }
 }
