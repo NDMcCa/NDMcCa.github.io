@@ -69,59 +69,17 @@ public class HashTable implements Dictionary {
     // toString
     /** toString override that will produce the expected format */
     public String toString() {
-        String hashBrownies = "";
+        String hashString = "";
         for (int i = 0; i < tableArray.length; i++){
             if (tableArray[i] != null){
                 if(tableArray[i].equals(DELETED)){
-                    hashBrownies += Integer.toString(i)+":"+DELETED+"\n";
+                    hashString += Integer.toString(i)+":"+DELETED+"\n";
                 } else {
-                    hashBrownies += Integer.toString(i)+":\""+tableArray[i]+"\"\n";
+                    hashString += Integer.toString(i)+":\""+tableArray[i]+"\"\n";
                 }
             }
         }
-        return hashBrownies;
-    }
-
-    public static void main(String[] args) {
-        HashTable ht = new HashTable();
-        ht.insert("15");
-        ht.insert("8");
-        ht.insert("11");
-        ht.insert("12");
-        ht.insert("4");
-        ht.insert("16");
-        ht.insert("6");
-        ht.insert("1");
-        ht.insert("0");
-        ht.insert("7");
-        ht.insert("3");
-        ht.insert("10");
-        ht.insert("13");
-        ht.insert("14");
-        ht.insert("2");
-        ht.insert("9");
-        ht.insert("5");
-
-        ht.delete("15");
-//        ht.delete("8");
-        ht.delete("11");
-//        ht.delete("12");
-        ht.delete("4");
-//        ht.delete("16");
-        ht.delete("6");
-        ht.delete("1");
-        ht.delete("0");
-//        ht.delete("7");
-        ht.delete("3");
-        ht.delete("10");
-//        ht.delete("13");
-//        ht.delete("14");
-//        ht.delete("2");
-        ht.delete("9");
-        ht.delete("5");
-        ht.insert("15");
-
-        System.out.println(ht.toString());
+        return hashString;
     }
 }
 
