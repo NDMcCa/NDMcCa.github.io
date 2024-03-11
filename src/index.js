@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import FontAwesomeIcon from "@fortawesome/react-fontawesome";
+import { faSun, faMoon, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faInstagram, faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
