@@ -60,16 +60,14 @@ function App() {
           </p>
         </div>
       </div>
-      <div className='container'>
-        <div className="section-black" id="Projects">
-          <h1>Projects</h1>
-          <p>Software development requires many skills. Most of my work to date has been with Java; however, I have been branching out into the unknown as well. Recently I have been focusing, of course, on web development. 
-            This inlcudes learning HTML, CSS, and JavaScript as well as learning how to use React and JSX. Coming soon are also some small projects that I have been working on using Python.
-          </p>
-          <p>
-            All projects are stored in GitHub repositories for easy viewing in a familar platform and also to demonstrate my ability to use version control as at least one of these projects is still a work in progress.
-          </p>
-        </div>
+      <div className="section-black" id="Projects">
+        <h1>Projects</h1>
+        <p>Software development requires many skills. Most of my work to date has been with Java; however, I have been branching out into the unknown as well. Recently I have been focusing, of course, on web development. 
+          This inlcudes learning HTML, CSS, and JavaScript as well as learning how to use React and JSX. Coming soon are also some small projects that I have been working on using Python.
+        </p>
+        <p>
+          All projects are stored in GitHub repositories for easy viewing in a familar platform and also to demonstrate my ability to use version control as at least one of these projects is still a work in progress.
+        </p>
       </div>
       <div className='card-container'>
         {projectCards}
@@ -83,17 +81,17 @@ function App() {
         
       </div> */}
       <div className='container' id="Creations">
-          <h1>Creations</h1>  
-          <p>This is a collection of things I have created that may not exactly pertain to software development. 
-            I have always been interested in creating things and I have been able to create a few things that I am proud of. 
-            This includes a few watch faces for the Wear OS platform and a few other things that I have created in my free time that may show up here at some point.
-          </p>
-        <div className="section-black" >
-          <h1>Android Wear OS Watch Faces</h1>
-          <p>I have created a few watch faces for the Wear OS platform. I have always been interested in the idea of creating a watch face and I have been able to create a few that I am proud of. 
-            To date, I have only created watch faces using Watch Face Studio, although I am looking to expand my knowledge of Android Studio which would enable me to create more complex watch faces in the future.
-          </p>
-        </div>
+        <h1>Creations</h1>  
+        <p>This is a collection of things I have created that may not exactly pertain to software development. 
+          I have always been interested in creating things and I have been able to create a few things that I am proud of. 
+          This includes a few watch faces for the Wear OS platform and a few other things that I have created in my free time that may show up here at some point.
+        </p>
+      </div>
+      <div className="section-black" >
+        <h1>Android Wear OS Watch Faces</h1>
+        <p>I have created a few watch faces for the Wear OS platform. I have always been interested in the idea of creating a watch face and I have been able to create a few that I am proud of. 
+          To date, I have only created watch faces using Watch Face Studio, although I am looking to expand my knowledge of Android Studio which would enable me to create more complex watch faces in the future.
+        </p>
       </div>
       <div className='card-container'>
         {watchCards}
