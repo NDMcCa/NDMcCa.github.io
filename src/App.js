@@ -55,7 +55,8 @@ function App() {
             I am a believer of the team and how to collaborate and learn from the unique abilities and experiences its diversity brings. 
             I have a passion for honing my software development skills and learning new techniques, paradigms, languages, and frameworks and how they may be applicable to any industry driven by technology.
           </p>
-          <p>Outside of professional skills and development, I am also a huge fan of the outdoors. I love to hike, camp, and travel the world around me. I'm an avid fan of aviation, aerospace, and anything with wings. I have always been fascinated by the idea of flight and have enjoyed developing systems simulation and audio immersion addons for flight simulators 
+          <p>Outside of professional skills and development, I am also a huge fan of the outdoors. I love to hike, camp, and travel the world around me. I'm an avid fan of aviation, aerospace, and anything with wings. 
+            I have always been fascinated by the idea of flight and have enjoyed developing systems simulation and audio immersion addons for flight simulators 
             on my own time as well as contributing to the development a larger project. 
           </p>
         </div>
