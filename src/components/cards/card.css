@@ -1,10 +1,11 @@
 
+/* Project Listing Cards */
 .card {
     flex: 0 0 auto;  
     display: flex;     
     flex-direction: row;
-    color: #000000;
-    background-color: #f2f2f2;
+    color: #ffffff;
+    background-color: #1e2c41;
     margin: 25px;
     width: 90%;
     height: 100px;
@@ -16,20 +17,29 @@
     align-items: flex-start;
 }
 
-.card > h2{
+.card--content {
+    display: flex;
     flex: 1;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     height: 100%;
-    align-self: flex-start;
-    width: fit-content;
+
 }
 
+.card--content > h2{
+    font-size: 1.8rem;
+}
 
-.card--button {
+.card--button--container {
     display: flex;
     align-self: flex-end;
     width: 100px;
+    height: 100%;
+}
+
+.card--button {
     height: inherit;
     padding: 0.5rem;
     font-size: 1.3rem;
@@ -39,12 +49,15 @@
     text-decoration: none;
     cursor: pointer;
     text-align: center;
+    padding-top: 25%;
 }
 
 .card--button:hover {
     background-color: #00D8FF;
 }
 
+
+/* Watch Cards */
 .w_card{
     height: auto;
     box-shadow: none;

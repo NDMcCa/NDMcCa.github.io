@@ -71,9 +71,6 @@ function App() {
         </p>
         {projectCards}
       </div>
-      {/* <div className='card-container'>
-        {projectCards}
-      </div> */}
       {/* <div className='container'>
         <h1>Relevant Courses</h1>
         
