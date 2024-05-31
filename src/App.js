@@ -45,7 +45,7 @@ function App() {
     </div>
     <div className="App-header">
       <div className='container-grid'>
-        <img className='grid--image' src={require('./images/avatar_alt.png')} alt="Nicholas McCamis" />
+        <img className='grid--image' src={require('./images/osk.jpg')} alt="Nicholas McCamis" />
         <h1 className='grid--title'>Hello, I'm Nicholas McCamis!</h1> 
         <div className='grid--item'>
           <p>Welcome to my website. I am a aspiring software developer and a 4th year Computer Science student at the University of Calgary. 
@@ -69,10 +69,11 @@ function App() {
         <p>
           All projects are stored in GitHub repositories for easy viewing in a familar platform and also to demonstrate my ability to use version control as at least one of these projects is still a work in progress.
         </p>
-      </div>
-      <div className='card-container'>
         {projectCards}
       </div>
+      {/* <div className='card-container'>
+        {projectCards}
+      </div> */}
       {/* <div className='container'>
         <h1>Relevant Courses</h1>
         

@@ -3,7 +3,7 @@ import './card.css';
 export default function ProjectCard (props){
     return (
     <div className="card" key={props.key}>
-        <img src={require(`${props.img}`)}  alt="none"/>
+        {/* <img src={require(`${props.img}`)}  alt="none"/> */}
         <h2>{props.title}</h2>
         <p>{props.content}</p>
         <p>{props.tags}</p>
