@@ -9,6 +9,7 @@ export const Menu = ({ sections, containerId }) => {
   const containerRef = useRef(null);
 
   const [theme, setTheme] = useState('light');
+  
 
   // Dark mode functionality
   useEffect(() => {
@@ -18,18 +19,18 @@ export const Menu = ({ sections, containerId }) => {
   }, []);
 
   useEffect(() => {
-    if (theme === 'dark') {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
+    theme === 'dark' ? document.documentElement.classList.add('dark') : document.documentElement.classList.remove('dark');
   }, [theme]);
 
   const handleThemeChange = () => {
+    theme === 'light' ? setTheme('dark') : setTheme('light');
+  }
+
+  const ThemeIcon = () => {
     if (theme === 'light') {
-      setTheme('dark');
+      return <i className="fas fa-moon text-black dark:text-neutral-200 text-3xl sm:text-4xl cursor-pointer transition-colors ease-in-out duration-500" onClick={handleThemeChange} />;
     } else {
-      setTheme('light');
+      return <i className="fas fa-sun text-black dark:text-neutral-200 text-3xl sm:text-4xl cursor-pointer transition-colors ease-in-out duration-500" onClick={handleThemeChange} />;
     }
   }
 
@@ -111,7 +112,7 @@ export const Menu = ({ sections, containerId }) => {
             </ScrollLink>
           ))}
         </div>
-        <i className="fas fa-sun text-black dark:text-neutral-200 text-3xl sm:text-4xl cursor-pointer transition-colors ease-in-out duration-500" onClick={handleThemeChange} />
+        <ThemeIcon />
           <motion.div
             className="absolute top-0 bottom-0 my-1 bg-black dark:bg-neutral-200 rounded-full transition-colors ease-in-out duration-500"
             layoutId="tab"
