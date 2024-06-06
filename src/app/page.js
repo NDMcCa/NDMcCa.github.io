@@ -18,6 +18,7 @@ import projects from './components/data/projects.js';
 import char from "./components/images/chargerwatch.png";
 import st from "./components/images/stwatch.png";
 import hdd from "./components/images/hddwatch.png";
+import BinClock from "./components/binClock.js";
 
 
 
@@ -127,6 +128,7 @@ export default function Home() {
               <Image src={next} alt="next" className="h-8 w-10 sm:h-9 sm:w-14 md:h-16 md:w-20 dark:bg-neutral-100 dark:rounded-sm px-1" />
               <Image src={tw} alt="tailwind" className="h-8 w-8 sm:h-9 sm:w-9 md:h-16 md:w-16 dark:bg-neutral-100 dark:rounded-sm" />
             </div>
+            <BinClock />
           </div>
         </section>
       </div>
