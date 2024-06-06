@@ -125,8 +125,8 @@ export default function Home() {
             <div className="flex flex-row items-center justify-center w-full h-fit space-x-4 px-4 py-4">
               <i className="fab fa-js text-black dark:text-neutral-200 text-3xl sm:text-4xl md:text-7xl cursor-pointer transition-colors ease-in-out duration-500" />
               <i className="fab fa-react text-black dark:text-neutral-200 text-3xl sm:text-4xl md:text-7xl cursor-pointer transition-colors ease-in-out duration-500" />
-              <Image src={next} alt="next" className="h-8 w-10 sm:h-9 sm:w-14 md:h-16 md:w-20 dark:bg-neutral-100 dark:rounded-sm px-1" />
-              <Image src={tw} alt="tailwind" className="h-8 w-8 sm:h-9 sm:w-9 md:h-16 md:w-16 dark:bg-neutral-100 dark:rounded-sm" />
+              <Image src={next} alt="next" className="h-8 w-10 sm:h-9 sm:w-14 md:h-16 md:w-20 dark:bg-neutral-200 dark:rounded-sm transition-colors ease-in-out duration-500 px-1" />
+              <Image src={tw} alt="tailwind" className="h-8 w-8 sm:h-9 sm:w-9 md:h-16 md:w-16 dark:bg-neutral-200 dark:rounded-sm transition-colors ease-in-out duration-500" />
             </div>
             <BinClock />
           </div>
