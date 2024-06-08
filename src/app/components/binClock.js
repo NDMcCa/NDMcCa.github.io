@@ -27,44 +27,44 @@ function startTime() {
 
     // Ones-Seconds Column
     if (s_1.charAt(s_1.length - 1) === "1") {
-        document.getElementById("s1").style.backgroundColor = "yellow";
+        document.getElementById("s1").style.backgroundColor = "#eab308";
     } else {
         document.getElementById("s1").style.backgroundColor = "#262626";
     }
 
     if (s_1.length > 1 && s_1.charAt(s_1.length - 2) === "1") {
-        document.getElementById("s2").style.backgroundColor = "yellow";
+        document.getElementById("s2").style.backgroundColor = "#eab308";
     } else {
         document.getElementById("s2").style.backgroundColor = "#262626";
     }
 
     if (s_1.length > 2 && s_1.charAt(s_1.length - 3) === "1") {
-        document.getElementById("s4").style.backgroundColor = "yellow";
+        document.getElementById("s4").style.backgroundColor = "#eab308";
     } else {
         document.getElementById("s4").style.backgroundColor = "#262626";
     }
     
     if (s_1.length > 3 && s_1.charAt(s_1.length - 4) === "1") {
-        document.getElementById("s8").style.backgroundColor = "yellow";
+        document.getElementById("s8").style.backgroundColor = "#eab308";
     } else {
         document.getElementById("s8").style.backgroundColor = "#262626";
     }
 
     // Tens-Seconds Column
     if (s_2.charAt(s_2.length - 1) === "1") {
-        document.getElementById("s1-2").style.backgroundColor = "yellow";
+        document.getElementById("s1-2").style.backgroundColor = "#eab308";
     } else {
         document.getElementById("s1-2").style.backgroundColor = "#262626";
     }
 
     if (s_2.length > 1 && s_2.charAt(s_2.length - 2) === "1") {
-        document.getElementById("s2-2").style.backgroundColor = "yellow";
+        document.getElementById("s2-2").style.backgroundColor = "#eab308";
     } else {
         document.getElementById("s2-2").style.backgroundColor = "#262626";
     }
 
     if (s_2.length > 2 && s_2.charAt(s_2.length - 3) === "1") {
-        document.getElementById("s4-2").style.backgroundColor = "yellow";
+        document.getElementById("s4-2").style.backgroundColor = "#eab308";
     } else {
         document.getElementById("s4-2").style.backgroundColor = "#262626";
     }
@@ -162,7 +162,7 @@ function BinClock() {
     useEffect(() => {startTime()});
     return (
         <div>
-            <div className="bg-neutral-950 dark:bg-neutral-400 rounded-xl w-fit h-fit flex transition-colors ease-in-out duration-500">
+            <div className="bg-neutral-950 dark:bg-neutral-200 rounded-xl w-fit h-fit flex transition-colors ease-in-out duration-500 shadow-md shadow-neutral-400 dark:shadow-black">
                 <div className="hour-2 flex flex-col items-center justify-end p-2 gap-2">
                     <div className="rounded-full bg-neutral-800 w-6 h-6" id="h2-2"></div>
                     <div className="rounded-full bg-neutral-800 w-6 h-6" id="h1-2"></div>

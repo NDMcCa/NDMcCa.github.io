@@ -32,3 +32,17 @@ body {
   }
 }
 
+.mask-fade {
+  mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
+}
+
+.dark .mask-fade {
+  mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
+}
+
+.mask-fade::before,
+.mask-fade::after {
+  transition: mask-image 0.5s ease-in-out, -webkit-mask-image 0.5s ease-in-out;
+}

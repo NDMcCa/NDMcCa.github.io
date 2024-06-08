@@ -13,11 +13,29 @@ module.exports = {
         "6xl": "3.5rem",
         "7xl": "4rem",
       },
+      maxWidth: {
+        "1800": "1800px"
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      transitionProperty: {
+        "mask": "mask-image, -webkit-mask-image",
+      }, 
+      transitionDuration: {
+        "500": "500ms",
+      },
+      transitionTimingFunction: {
+        "ease-in-out": "ease-in-out",
+      }
+    },
+  },
+  variants: {
+    extend: {
+      maskImage: ['dark'],
+      webkitMaskImage: ['dark'],
     },
   },
   plugins: [],
