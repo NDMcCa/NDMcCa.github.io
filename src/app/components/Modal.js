@@ -37,6 +37,11 @@ const Modal = ({ isShowing, hide }) => isShowing ? ReactDOM.createPortal(
                     Added this very changelog modal. Added the scrolling skills tapes to the bottom of the "Home" section. Added downloadable resume to the "Home" section. Streamlined the text content of the "Home" section to be more concise.
                     Fixed issues with smaller 16:9 resolutions as before 16:9 worked best on 1440p (now you know the size of my monitor). Added hover animations to cards. Added an extra watch face card for something coming soon (hopefully). Organized import statements in page.js.
                 </p>
+                <h3 className="text-sm md:text-lg 2xl:text-lg font-semibold mt-2 mb-1 md:mt-4 text-black dark:text-neutral-200">10/31/2024: </h3>
+                <p className="text-xs md:text-base 2xl:text-lg text-black dark:text-neutral-200">
+                    Happy Halloween! Fixed the responsive design of the site to be more mobile-friendly where the sizing accounts for the space the browser window takes. Improved accessiblity of resume button, other icon buttons, and title in the "Home" section. Updated text content and sizing in "Home" and "Dev Work" sections. Changed the programming language and framework icons to their more accurate colour versions;
+                    finding more of them in black or white that would be easily compatible with light/dark mode was going to get difficult. Fixed a bug with light/dark mode. Changes made to the Dev Work section to be more up to date. Attached updated resume to the "Home" section.
+                </p>
             </div>
             <button
                 className="bg-red-500 hover:bg-red-800 hover:scale-105 text-white font-bold py-2 px-4 rounded transition ease-in-out duration-500 w-1/2 self-center"
