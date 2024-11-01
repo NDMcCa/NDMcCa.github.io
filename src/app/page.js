@@ -66,7 +66,7 @@ export default function Home() {
       </div>
       <div className="sm:px-6 md:px-8 lg:px-36 xl:px-56 2xl:w-fit 2xl:max-w-1800 2xl:mx-auto 2xl:px-0 relative z-0">
         <section className="snap-center max-lg:snap-always flex flex-col 2xl:flex-row items-center justify-start w-full h-screen transition-colors ease-in-out duration-500 bg-neutral-100 pt-20 md:pt-28 dark:bg-neutral-950">
-          <div id='Home' className="flex flex-row 2xl:flex-col 2xl:items-center 2xl:justify-start 2xl:h-full 2xl:w-fit items-left justify-center w-full h-fit space-x-1 md:space-x-4 xl:space-x-28 2xl:space-x-0 2xl:space-y-10 px-4 pt-4 pb-4 xl:pb-8 transition-colors ease-in-out duration-500
+          <div id='Home' className="flex flex-row 2xl:flex-col 2xl:items-center 2xl:justify-start 2xl:h-full 2xl:w-fit items-left justify-center w-full h-fit space-x-1 md:space-x-4 xl:space-x-28 2xl:space-x-0 2xl:space-y-10 px-4 md:pt-4 pb-4 xl:pb-8 transition-colors ease-in-out duration-500
           bg-neutral-100 dark:bg-neutral-950">
             <Image src={osk} alt="osk" className="rounded-full h-24 w-24 sm:h-32 sm:w-32 md:h-44 md:w-44 xl:h-64 xl:w-64 2xl:h-80 2xl:w-80" />
             <div className="flex flex-col 2xl:w-full 2xl:space-y-10">
@@ -90,14 +90,14 @@ export default function Home() {
             text-neutral-200 dark:text-black bg-neutral-900 dark:bg-neutral-200 hover:bg-neutral-500 rounded-xl shadow-md shadow-neutral-600 dark:shadow-black hover:scale-105 transition ease-in-out duration-500 px-2">Resume</button>
           </div>
           <hl className="w-0 h-0 2xl:w-1 2xl:h-4/5 2xl:mb-16 2xl:bg-neutral-950 2xl:dark:bg-neutral-400 transition-colors ease-in-out duration-500" />
-          <div className="flex flex-col items-center justify-start w-full h-fit bg-neutral-100 dark:bg-neutral-950 space-x-4 space-y-4 lg:space-y-8 px-4 py-6 2xl:self-start transition-colors ease-in-out duration-500">
+          <div className="flex flex-col items-center justify-start w-full h-fit bg-neutral-100 dark:bg-neutral-950 space-x-4 space-y-2 lg:space-y-8 px-4 py-6 2xl:self-start transition-colors ease-in-out duration-500">
             <h1 className="text-2xl sm:text-4xl md:text-5xl xl:text-6xl text-black dark:text-neutral-200 m-auto text-center transition-colors ease-in-out duration-500">Developer and Designer</h1>
             <p className="text-xs sm:text-xl md:text-xl xl:text-3xl 2xl:text-2xl text-black dark:text-neutral-200 transition-colors ease-in-out duration-500">I am a aspiring software developer and a 4th year Computer Science student at the University of Calgary
-              always seeking new heights in software development skills and learning new techniques, languages, frameworks, and even programming paradigms.
+              always seeking new heights in software development skills and learning new techniques, languages, frameworks, and paradigms of programming.
             </p>
             <p className="text-xs sm:text-xl md:text-xl xl:text-3xl 2xl:text-2xl text-black dark:text-neutral-200 transition-colors ease-in-out duration-500">My greatest passion is the outdoors; I love hiking and backpacking. I also like bouldering (indoors!). I'm also an avid fan of aviation, aerospace, and anything with wings and as amateur sound engineer, I have contributed to audio in well-known flight sim projects. 
             </p>
-            <h2 className="text-2xl sm:text-4xl md:text-5xl xl:text-6xl text-black dark:text-neutral-200 m-auto text-center transition-colors ease-in-out duration-500 xl:pt-20" >Knolewdge/Skills</h2>
+            <h2 className="text-2xl sm:text-4xl md:text-5xl xl:text-6xl text-black dark:text-neutral-200 m-auto text-center transition-colors ease-in-out duration-500 pt-6 xl:pt-20" >Knowledge/Skills</h2>
             <IconTape />
           </div>
         </section>
