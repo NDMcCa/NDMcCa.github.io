@@ -93,7 +93,7 @@ export const Menu = ({ sections, containerId }) => {
   return (
     <div id={containerId} ref={containerRef}>
       <nav className="relative flex items-center justify-center w-full gap-1.5 px-2 md:gap-5">
-        <div className="flex items-center px-2 py-2 mx-2 outline outline-2 outline-black dark:outline-neutral-200 rounded-full w-fit transition-colors ease-in-out duration-500">
+        <div className="flex items-center px-2 py-1 mx-2 outline outline-2 outline-black dark:outline-neutral-200 rounded-full w-fit transition-colors ease-in-out duration-500">
           {sections.map((section) => (
             <ScrollLink
               key={section.id}
@@ -106,7 +106,7 @@ export const Menu = ({ sections, containerId }) => {
               duration={500}
               onSetActive={handleSetActive}
               onClick={() => handleScrollTo(section.id)}
-              className="menu-item select-none text-xs sm:text-sm z-10 block cursor-pointer px-2 py-1.5 uppercase text-neutral-200 mix-blend-difference md:px-5 md:py-3 md:text-base lg:text-xl transition-colors ease-in-out duration-500
+              className="menu-item select-none text-xs sm:text-sm z-10 block cursor-pointer px-2 py-1.5 uppercase text-neutral-200 mix-blend-difference md:px-5 md:py-3 md:text-base lg:text-lg transition-colors ease-in-out duration-500
               sm:text-s">
               {section.label}
             </ScrollLink>
