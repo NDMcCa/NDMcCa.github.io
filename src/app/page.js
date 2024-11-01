@@ -29,7 +29,7 @@ export default function Home() {
   const [showModal, setShowModal] = useState(false);
 
   const download = () => {
-    fetch("../../public/Resume.pdf").then(response => {
+    fetch("../../public/Nichiolas_Resume.pdf").then(response => {
       response.blob().then(blob => {
         let url = window.URL.createObjectURL(blob);
         let a = document.createElement('a');
@@ -90,7 +90,7 @@ export default function Home() {
             text-neutral-200 dark:text-black bg-neutral-900 dark:bg-neutral-200 hover:bg-neutral-500 rounded-xl shadow-md shadow-neutral-600 dark:shadow-black hover:scale-105 transition ease-in-out duration-500 px-2">Resume</button>
           </div>
           <hl className="w-0 h-0 2xl:w-1 2xl:h-4/5 2xl:mb-16 2xl:bg-neutral-950 2xl:dark:bg-neutral-400 transition-colors ease-in-out duration-500" />
-          <div className="flex flex-col items-center justify-start w-full h-fit bg-neutral-100 dark:bg-neutral-950 space-x-4 space-y-2 lg:space-y-8 px-4 py-6 2xl:self-start transition-colors ease-in-out duration-500">
+          <div className="flex flex-col items-center justify-start w-full h-fit bg-neutral-100 dark:bg-neutral-950 space-x-4 space-y-2 lg:space-y-8 px-4 py-1 md:py-6 2xl:self-start transition-colors ease-in-out duration-500">
             <h1 className="text-2xl sm:text-4xl md:text-5xl xl:text-6xl text-black dark:text-neutral-200 m-auto text-center transition-colors ease-in-out duration-500">Developer and Designer</h1>
             <p className="text-xs sm:text-xl md:text-xl xl:text-3xl 2xl:text-2xl text-black dark:text-neutral-200 transition-colors ease-in-out duration-500">I am a aspiring software developer and a 4th year Computer Science student at the University of Calgary
               always seeking new heights in software development skills and learning new techniques, languages, frameworks, and paradigms of programming.
