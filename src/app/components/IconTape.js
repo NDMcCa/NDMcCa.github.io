@@ -7,7 +7,7 @@ import js from "../../../public/JS.png";
 import html from "../../../public/HTML5_logo.png";
 import css from "../../../public/CSS3_logo.png";
 import python from "../../../public/Python.png";
-import c from "../../../public/c_Logo.png";
+import c from "../../../public/C_Logo.png";
 import csharp from "../../../public/CSharp.png";
 
 import react from "../../../public/react.png";

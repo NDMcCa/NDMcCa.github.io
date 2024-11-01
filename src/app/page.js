@@ -5,7 +5,7 @@ import React, { useState } from "react";
 
 // DO NOT LISTEN TO THE LINTER HERE vvvvvvv
 import { Menu } from './components/menu.js';
-import BinClock from "./components/binclock.js";
+import BinClock from "./components/binClock.js";
 
 import IconTape from "./components/IconTape.js";
 import Modal from "./components/Modal.js";
