@@ -3,8 +3,10 @@
 import Image from "next/image";
 import React, { useState } from "react";
 
-import { Menu } from './components/Menu.js';
-import BinClock from "./components/BinClock.js";
+// DO NOT LISTEN TO THE LINTER HERE vvvvvvv
+import { Menu } from './components/menu.js';
+import BinClock from "./components/binclock.js";
+
 import IconTape from "./components/IconTape.js";
 import Modal from "./components/Modal.js";
 
