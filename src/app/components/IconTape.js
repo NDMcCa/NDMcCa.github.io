@@ -74,7 +74,7 @@ const IconTape = () => {
             </motion.div>
             <div className='text-center'>
                 <h2 className='text-sm sm:text-xl md:text-2xl xl:text-3xl 2xl:text-2xl text-black dark:text-neutral-200 transition-colors ease-in-out duration-500 pt-3 xl:pt-10'>
-                    Frameworks/Technologies:
+                    Frameworks:
                 </h2>
             </div>
             <motion.div

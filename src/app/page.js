@@ -65,12 +65,12 @@ export default function Home() {
         <Menu sections={sections} containerId="page" />
       </div>
       <div className="sm:px-6 md:px-8 lg:px-36 xl:px-56 2xl:w-fit 2xl:max-w-1800 2xl:mx-auto 2xl:px-0 relative z-0">
-        <section className="snap-center max-lg:snap-always flex flex-col 2xl:flex-row items-center justify-start w-full h-screen transition-colors ease-in-out duration-500 bg-neutral-100 pt-20 md:pt-28 dark:bg-neutral-950 xl:mb-24">
-          <div id='Home' className="flex flex-row 2xl:flex-col 2xl:items-center 2xl:justify-start 2xl:h-full 2xl:w-fit items-left justify-center w-full h-fit space-x-1 md:space-x-4 xl:space-x-28 2xl:space-x-0 2xl:space-y-4 px-4 md:pt-2 pb-4 xl:pb-8 transition-colors ease-in-out duration-500
+        <section className="snap-center max-lg:snap-always flex flex-col 2xl:flex-row items-center justify-start w-full h-screen transition-colors ease-in-out duration-500 bg-neutral-100 pt-20 md:pt-28 dark:bg-neutral-950 xl:mb-18">
+          <div id='Home' className="flex flex-row 2xl:flex-col 2xl:items-center 2xl:justify-start 2xl:h-full 2xl:w-fit items-left justify-center w-full h-fit space-x-1 md:space-x-4 xl:space-x-28 2xl:space-x-0 2xl:space-y-4 md:pt-2 pb-4 xl:py-8 transition-colors ease-in-out duration-500
           bg-neutral-100 dark:bg-neutral-950">
             <Image src={osk} alt="osk" className="rounded-full h-24 w-24 sm:h-32 sm:w-32 md:h-44 md:w-44 xl:h-60 xl:w-60 2xl:h-70 2xl:w-70" />
             <div className="flex flex-col 2xl:w-full 2xl:space-y-10">
-              <h1 className="text-3xl md:text-5xl xl:text-6xl text-black dark:text-neutral-200 m-auto text-center transition-colors ease-in-out duration-500 px-2">Nicholas McCamis</h1>
+              <h1 className="text-3xl md:text-5xl 2xl:text-6xl text-black dark:text-neutral-200 m-auto text-center transition-colors ease-in-out duration-500 px-2">Nicholas McCamis</h1>
               <div className="flex flex-row items-center justify-center w-full h-fit space-x-3 md:space-x-6 xl:space-x-10 px-4">
                 <a href="https://github.com/NDMcCa">
                   <i className="fab fa-github text-black dark:text-neutral-200 text-3xl sm:text-4xl md:text-5xl cursor-pointer transition-colors ease-in-out duration-500" />
@@ -89,19 +89,19 @@ export default function Home() {
             <button onClick={download} className="w-30 h-24 md:w-48 md:h-40 md:text-xl lg:w-52 lg:h-20 lg:text-2xl xl:w-72 xl:h-20 xl:text-3xl 
             text-neutral-200 dark:text-black bg-neutral-900 dark:bg-neutral-200 hover:bg-neutral-500 rounded-xl shadow-md shadow-neutral-600 dark:shadow-black hover:scale-105 transition ease-in-out duration-500 px-2">Resume</button>
           </div>
-          <hl className="w-0 h-0 2xl:w-1 2xl:h-4/5 2xl:mb-16 2xl:bg-neutral-950 2xl:dark:bg-neutral-400 transition-colors ease-in-out duration-500" />
-          <div className="flex flex-col items-center justify-start w-full h-fit bg-neutral-100 dark:bg-neutral-950 space-x-4 space-y-2 px-4 py-1 2xl:self-start transition-colors ease-in-out duration-500">
-            <h1 className="text-2xl sm:text-4xl md:text-5xl text-black dark:text-neutral-200 m-auto text-center transition-colors ease-in-out duration-500">Developer and Designer</h1>
-            <p className="text-xs sm:text-xl md:text-xl xl:text-3xl 2xl:text-xl text-black dark:text-neutral-200 transition-colors ease-in-out duration-500">I am a aspiring software developer and a 4th year Computer Science student at the University of Calgary
+          {/* <hl className="w-0 h-0 2xl:w-1 2xl:h-4/5 2xl:mb-16 2xl:bg-neutral-950 2xl:dark:bg-neutral-400 transition-colors ease-in-out duration-500" /> */}
+          <div className="flex flex-col items-center justify-start w-full h-fit bg-neutral-100 dark:bg-neutral-950 space-x-4 space-y-2 px-4 xl:py-8 py-1 2xl:self-start transition-colors ease-in-out duration-500">
+            <h1 className="text-2xl sm:text-4xl md:text-5xl text-black dark:text-neutral-200 m-auto text-center transition-colors ease-in-out duration-500 pb-2">So Who Am I Anyway?</h1>
+            <p className="text-xs sm:text-xl md:text-xl xl:text-lg 2xl:text-lg text-black dark:text-neutral-200 transition-colors ease-in-out duration-500">I am a aspiring software developer and a 4th year Computer Science student at the University of Calgary
               always seeking new heights in software development skills and learning new techniques, languages, frameworks, and paradigms of programming.
             </p>
-            <p className="text-xs sm:text-xl md:text-xl xl:text-3xl 2xl:text-xl text-black dark:text-neutral-200 transition-colors ease-in-out duration-500">My greatest passion is the outdoors; I love hiking and backpacking. I also like bouldering (indoors!). I'm also an avid fan of aviation, aerospace, and anything with wings and as amateur sound engineer, I have contributed to audio in well-known flight sim projects. 
+            <p className="text-xs sm:text-xl md:text-xl xl:text-lg 2xl:text-lg text-black dark:text-neutral-200 transition-colors ease-in-out duration-500">My greatest passion is the outdoors; I love hiking and backpacking. I also like bouldering (indoors!). I'm also an avid fan of aviation, aerospace, and anything with wings and as amateur sound engineer, I have contributed to audio in well-known flight sim projects. 
             </p>
             <IconTape />
           </div>
         </section>
-        <section id='Dev Work' className="max-lg:snap-start max-lg:snap-always flex flex-col items-center w-full h-screen pt-24 md:pt-28 xl:pt-10 bg-neutral-100  dark:bg-neutral-950 transition-colors ease-in-out duration-500 xl:mb-24">
-          <div  className="flex flex-col items-center w-full h-fit bg-neutral-100  dark:bg-neutral-950 space-y-4 px-4 xl:px-10 transition-colors ease-in-out duration-500">
+        <section className="max-lg:snap-start max-lg:snap-always flex flex-col items-center w-full h-screen pt-24 md:pt-28 xl:pt-0 bg-neutral-100  dark:bg-neutral-950 transition-colors ease-in-out duration-500 xl:mb-2">
+          <div id='Dev Work' className="flex flex-col items-center w-full h-fit bg-neutral-100  dark:bg-neutral-950 space-y-4 px-4 xl:px-10 transition-colors ease-in-out duration-500">
             <h1 className="text-3xl sm:text-4xl md:text-5xl text-black dark:text-neutral-200 m-auto text-center transition-colors ease-in-out duration-500">Development Work</h1>
             <p className="text-xs sm:text-xl md:text-xl xl:text-3xl 2xl:text-2xl text-black dark:text-neutral-200 transition-colors ease-in-out duration-500">Below is a collection of some of my projects from micro projects to large projects developed on a team of 20 developers. This collection spans from front end React/JSX development to fully Object-Oriented back end Java code. 
               All projects are available for viewing in repositories. Click on the items below to see more.
@@ -109,8 +109,8 @@ export default function Home() {
             {projectCards}
           </div>
         </section>
-        <section id='Creations' className="max-lg:snap-start max-lg:snap-always flex flex-col items-center w-full h-screen pt-24 md:pt-28 xl:pt-0 bg-neutral-100 dark:bg-neutral-950 transition-colors ease-in-out duration-500">
-          <div className="flex flex-col items-center w-full h-fit bg-neutral-100  dark:bg-neutral-950 space-y-4 lg:space-y-10 px-4 xl:px-10 transition-colors ease-in-out duration-500">
+        <section className="max-lg:snap-start max-lg:snap-always flex flex-col items-center w-full h-screen pt-24 md:pt-28 xl:pt-0 bg-neutral-100 dark:bg-neutral-950 transition-colors ease-in-out duration-500">
+          <div id='Creations' className="flex flex-col items-center w-full h-fit bg-neutral-100  dark:bg-neutral-950 space-y-4 lg:space-y-10 px-4 xl:px-10 transition-colors ease-in-out duration-500">
             <h1 className="text-3xl sm:text-4xl md:text-5xl text-black dark:text-neutral-200 m-auto text-center">Creations</h1>
             <p className="text-xs sm:text-xl md:text-xl xl:text-3xl 2xl:text-2xl text-black dark:text-neutral-200">I have created a few watch faces for the Wear OS platform. I have always been interested in the idea of creating a watch face and I have been able to create a few that I am proud of.</p>
             <p className="text-xs sm:text-xl md:text-xl xl:text-3xl 2xl:text-2xl text-black dark:text-neutral-200">To date, I have only created watch faces using Watch Face Studio, although I am looking to expand my knowledge of Android Studio which would enable me to create more complex watch faces in the future.</p>
@@ -122,10 +122,10 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section id='About' className="max-lg:snap-start max-lg:snap-always flex flex-col items-center w-full h-screen pt-24 md:pt-28 bg-neutral-100 dark:bg-neutral-950 transition-colors ease-in-out duration-500">
+        <section className="max-lg:snap-start max-lg:snap-always flex flex-col items-center w-full h-screen pt-24 md:pt-28 xl:pt-0 bg-neutral-100 dark:bg-neutral-950 transition-colors ease-in-out duration-500">
           <div className="flex flex-col items-center w-full h-fit bg-neutral-100  dark:bg-neutral-950 space-y-4 lg:space-y-10 px-4 xl:px-10 transition-colors ease-in-out duration-500">
             <h1 className="text-3xl sm:text-4xl md:text-5xl text-black dark:text-neutral-200 m-auto text-center">About</h1>
-            <p className="sm:text-xl md:text-2xl text-black dark:text-neutral-200 transition-colors ease-in-out duration-500">This site was build in React/Next.js and uses the Tailwind CSS and Framer Motion libraries and the Font Awesome library for some of the used icons.</p>
+            <p id='About' className="sm:text-xl md:text-2xl text-black dark:text-neutral-200 transition-colors ease-in-out duration-500">This site was build in React/Next.js and uses the Tailwind CSS and Framer Motion libraries and the Font Awesome library for some of the used icons.</p>
             <p className="sm:text-xl md:text-2xl text-black dark:text-neutral-200 transition-colors ease-in-out duration-500">It is very much still a work in progress at this time. Expect to see new functionality added in the future such as more detail, more pages, more features on the existing page, and code optimization.</p>
             <div className="flex flex-row items-center justify-center w-full h-fit space-x-4 px-4 py-4">
               <i className="fab fa-js text-black dark:text-neutral-200 text-3xl sm:text-4xl md:text-7xl cursor-pointer transition-colors ease-in-out duration-500" />

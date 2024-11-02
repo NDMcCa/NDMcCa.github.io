@@ -13,6 +13,9 @@ module.exports = {
         "6xl": "3.5rem",
         "7xl": "4rem",
       },
+      screens: {
+        '3xl': '1920px',
+      },
       maxWidth: {
         "1800": "1800px"
       },
