@@ -42,9 +42,13 @@ const Modal = ({ isShowing, hide }) => isShowing ? ReactDOM.createPortal(
                     Happy Halloween! Fixed the responsive design of the site to be more mobile-friendly where the sizing accounts for the space the browser window takes. Improved accessiblity of resume button, other icon buttons, and title in the "Home" section. Updated text content and sizing in "Home" and "Dev Work" sections. Changed the programming language and framework icons to their more accurate colour versions;
                     finding more of them in black or white that would be easily compatible with light/dark mode was going to get difficult. Fixed a bug with light/dark mode. Changes made to the Dev Work section to be more up to date. Attached updated resume to the "Home" section.
                 </p>
-                <h3 className="text-sm md:text-lg 2xl:text-lg font-semibold mt-2 mb-1 md:mt-4 text-black dark:text-neutral-200">1/11/2024: </h3>
+                <h3 className="text-sm md:text-lg 2xl:text-lg font-semibold mt-2 mb-1 md:mt-4 text-black dark:text-neutral-200">11/1/2024: </h3>
                 <p className="text-xs md:text-base 2xl:text-lg text-black dark:text-neutral-200">
                     Finally figured out why the UI was broken on 1080p laptop screens: scaling! I now understand why Tailwind set their 2xl breakpoint to 1536px. I have adjusted for that resolution now and have added a breakpoint for true 1080p+ for later use.
+                </p>
+                <h3 className="text-sm md:text-lg 2xl:text-lg font-semibold mt-2 mb-1 md:mt-4 text-black dark:text-neutral-200">11/20/2024: </h3>
+                <p className="text-xs md:text-base 2xl:text-lg text-black dark:text-neutral-200">
+                    Added a new watch face: altimeter watch face.
                 </p>
             </div>
             <button

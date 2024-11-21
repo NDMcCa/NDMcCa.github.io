@@ -22,6 +22,7 @@ import next from "../../public/next.svg";
 import char from "./components/images/chargerwatch.png";
 import st from "./components/images/stwatch.png";
 import hdd from "./components/images/hddwatch.png";
+import alt from "./components/images/altwatch.png";
 import eadi from "./components/images/eadiwatch.png";
 
 export default function Home() {
@@ -118,7 +119,8 @@ export default function Home() {
               <Image src={char} alt="Charger Watch" className="h-64 w-64 lg:h-72 lg:w-72 rounded-3xl snap-center snap-always shadow-md shadow-neutral-600 dark:shadow-black" />
               <Image src={st} alt="Star Trek Watch" className="h-64 w-64 lg:h-72 lg:w-72 rounded-3xl snap-center snap-always shadow-md shadow-neutral-600 dark:shadow-black" />
               <Image src={hdd} alt="Hard Disk Watch" className="h-64 w-64 lg:h-72 lg:w-72 rounded-3xl snap-center snap-always shadow-md shadow-neutral-600 dark:shadow-black" />
-              <Image src={eadi} alt="Coming Soon" className="h-64 w-64 lg:h-72 lg:w-72 rounded-3xl snap-center snap-always shadow-md shadow-neutral-600 dark:shadow-black" />
+              <Image src={alt} alt="Altimeter Watch" className="h-64 w-64 lg:h-72 lg:w-72 rounded-3xl snap-center snap-always shadow-md shadow-neutral-600 dark:shadow-black" />
+              {/* <Image src={eadi} alt="Coming Soon" className="h-64 w-64 lg:h-72 lg:w-72 rounded-3xl snap-center snap-always shadow-md shadow-neutral-600 dark:shadow-black" /> */}
             </div>
           </div>
         </section>
