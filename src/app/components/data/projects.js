@@ -15,14 +15,14 @@ const projects = [
     "description": "A project I worked on in a software engineering course utilizing a given hardware facade developed in Java",
     "tags": "Java, JUnit 4, Git, IntelliJ IDEA, Software Architecture",
     "icons": "fa-brands fa-java",
-    "link": "https://github.com/NDMcCa/Self-Checkout-System",
+    "link": "https://github.com/kingsleyzhong/seng300-iteration3",
     "key": 2
 },
 {
-    "title": "GameSwap (WIP)",
+    "title": "GameSwap",
     "img": "",
-    "description": "Examples of elementary data structures implemented in Java and also in .NET/C# demonstrating how data structures may be implemented and the difference between two very similar languages. Includes interfaces for each data structure.",
-    "tags": "Svelte, SvelteKit, Docker, MySQL",
+    "description": "A mock ecommerce web application for buying, selling, and trading video games. Built with SvelteKit and MySQL and containerized with Docker.",
+    "tags": "Svelte, SvelteKit, TypeScript, Docker, MySQL",
     "icons": "fa-brands fa-js",
     "link": "https://github.com/NDMcCa/GameSwap--CPSC-471-Project-",
     "key": 3
