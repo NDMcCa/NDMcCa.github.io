@@ -1,5 +1,7 @@
 'use client';
 
+// Much of this code was created before I used react; it has been adapted to work within a react component
+// but the original code was written in vanilla JavaScript as may be evident
 import React, {useEffect} from 'react';
 
 function startTime() {

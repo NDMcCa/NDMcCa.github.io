@@ -1,0 +1,34 @@
+[
+    {
+      "title": "Charger Watch",
+      "img": "/chargerwatch.png",
+      "description": "This watch face is inspired by the speedometer of a Dodge Charger, specifically 2011 with the grey LCD (EVIC) display. It displays analog time in minutes and hours and also displays the date, current tempurature, and battery percentage.",
+      "tags": "Development Environment: Watch Face Studio",
+      "link": "",
+      "key": "1"
+    },
+    {
+      "title": "Star Trek Watch",
+      "img": "/stwatch.png",
+      "description": "This watch face is inspired by the graphic designs used for the starship computers (the GUI if you will) in the 23rd century era of Star Trek. It displays digital time and above in smaller text, two lines of world clocks, the date, sunrise and sunset times, and the current actual and feels like tempuratures. The four marked side buttons on the left are funtional and are mapped to watch apps.",
+      "tags": "Development Environment: Watch Face Studio",
+      "link": "",
+      "key": "2"
+    },
+    {
+      "title": "Hard Disk Watch",
+      "img": "/hddwatch.png",
+      "description": "This watch face is simply two analog hands, minute and hour, superimposed over an artistic drawing (sort of a blueprint but not blue) of an HDD. I did not design this drawing myself. The current date is integrated in as one of the figure numbers.",
+      "tags": "Development Environment: Watch Face Studio",
+      "link": "",
+      "key": "3"
+    },
+    {
+      "title": "Altimeter Watch",
+      "img": "/altwatch.png",
+      "description": "This watch face is inspired by the format seen on a typical electromechanical altimeter. You may need to have a basic understanding of how an altimeter displays altitude to understand this watch face.",
+      "tags": "None",
+      "link": "",
+      "key": "4"
+    }
+  ]
