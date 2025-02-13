@@ -104,13 +104,13 @@ export default function Home() {
         <div id="Home" className="flex flex-col items-center justify-center h-screen max-w-screen-xl bg-neutral-100 dark:bg-neutral-950 transition-colors ease-in-out duration-500">
 
           {/* Divide part of this into rows */}
-          <div className="flex flex-row items-center justify-center h-fit w-full bg-none px-10 xl:px-0">
+          <div className="flex flex-row items-center justify-center h-fit w-full bg-none px-2 gap-x-6 md:gap-x-0 md:px-10 xl:px-0">
 
             {/* Contact card */}
             <ContactCard />
 
             {/* Stack the actual content */}
-            <div className="flex flex-col items-center justify-center gap-y-4 h-full w-1/2 bg-neutral-100 dark:bg-neutral-950 transition-colors ease-in-out duration-500">
+            <div className="flex flex-col items-center justify-center gap-y-4 h-full w-fit md:w-1/2 bg-neutral-100 dark:bg-neutral-950 transition-colors ease-in-out duration-500">
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl text-black dark:text-neutral-200 transition-colors ease-in-out duration-500">
                 Nicholas McCamis
               </h1>
@@ -138,12 +138,26 @@ export default function Home() {
               </ul>
             </div>
           </div>
+          <div className="md:hidden flex flex-row items-center justify-center gap-x-10 pt-3 h-fit w-fit">
+            <a href="https://github.com/NDMcCa" className="flex flex-row items-center justify-center space-x-2" >
+              <i className="fab fa-github text-black dark:text-neutral-200 text-3xl sm:text-3xl md:text-5xl xl:text-6xl " />
+            </a>
+            <a href="https://www.instagram.com/nickmccamis67?igsh=MXBxOHc3cDU2ODduYQ==" className="flex flex-row items-center justify-center space-x-2">
+              <i className="fab fa-instagram text-black dark:text-neutral-200 text-4xl sm:text-4xl md:text-5xl xl:text-6xl" />
+            </a>
+            <a href="https://www.linkedin.com/in/nicholas-mccamis/" className="flex flex-row items-center justify-center space-x-2 ">
+              <i className="fab fa-linkedin text-black dark:text-neutral-200 text-4xl sm:text-4xl md:text-5xl xl:text-6xl" />
+            </a>
+            <a href="mailto:nicholas.m19@gmail.com" className="flex flex-row items-center justify-center space-x-2">
+              <i className="fas fa-envelope text-black dark:text-neutral-200 text-4xl sm:text-4xl md:text-5xl xl:text-6xl" />
+            </a>
+          </div>
 
           {/* Info */}
           <div className="px-5 md:px-20">
 
             {/* About */}        
-            <h2 className="pt-10 pb-2 text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl text-black dark:text-neutral-200 transition-colors ease-in-out duration-500">
+            <h2 className="pt-3 md:pt-10 pb-2 text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl text-black dark:text-neutral-200 transition-colors ease-in-out duration-500">
               Who am I?
             </h2>
             <p className="text-xs sm:text-sm md:text-m lg:text-lg xl:text-xl 2xl:text-2xl text-black dark:text-neutral-200 transition-colors ease-in-out duration-500">
@@ -151,7 +165,7 @@ export default function Home() {
             </p>
 
             {/* Dev Tech */}
-            <h2 className="pt-10 pb-2 text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl text-black dark:text-neutral-200 transition-colors ease-in-out duration-500">
+            <h2 className="pt-10 pb-2 text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl text-black dark:text-neutral-200 transition-colors ease-in-out duration-500">
               Developer Technologies
             </h2>
             <p className="text-xs sm:text-sm md:text-m lg:text-lg xl:text-xl 2xl:text-2xl text-black dark:text-neutral-200 transition-colors ease-in-out duration-500">
@@ -221,7 +235,7 @@ export default function Home() {
 
         {/* Dev Work Section */}
         <div id="Dev Work" className="px-5 md:px-20 gap-y-5 flex flex-col items-start justify-center h-screen max-w-screen-xl bg-neutral-100 dark:bg-neutral-950 transition-colors ease-in-out duration-500">
-          <h2 className="pt-10 pb-2 text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl text-black dark:text-neutral-200 transition-colors ease-in-out duration-500">
+          <h2 className="pt-10 md:pb-2 text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl text-black dark:text-neutral-200 transition-colors ease-in-out duration-500">
               Developer Work
           </h2>
           <p className="pb-10 text-xs sm:text-xl md:text-xl xl:text-3xl 2xl:text-2xl text-black dark:text-neutral-200 transition-colors ease-in-out duration-500">Below is a collection of some of my projects from micro projects to large projects developed on a team of 20 developers. This collection spans from front end React/JSX development to fully Object-Oriented back end Java code. 
@@ -233,10 +247,10 @@ export default function Home() {
 
         {/* Creations Section */}
         <div id='Creations' className="px-5 md:px-20 flex flex-col items-start max-w-screen-xl bg-neutral-100 dark:bg-neutral-950 transition-colors ease-in-out duration-500 py-8 mb-32">
-          <h2 className="pt-10 pb-2 text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl text-black dark:text-neutral-200 transition-colors ease-in-out duration-500">Creations</h2>
+          <h2 className="pt-10 pb-2 text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl text-black dark:text-neutral-200 transition-colors ease-in-out duration-500">Creations</h2>
           <p className="text-xs sm:text-xl md:text-xl xl:text-3xl 2xl:text-2xl text-black dark:text-neutral-200">I have created a few watch faces for the Wear OS platform. I have always been interested in the idea of creating a watch face and I have been able to create a few that I am proud of.</p>
           <p className="text-xs sm:text-xl md:text-xl xl:text-3xl 2xl:text-2xl text-black dark:text-neutral-200 mb-4">To date, I have only created watch faces using Watch Face Studio, although I am looking to expand my knowledge of Android Studio which would enable me to create more complex watch faces in the future.</p>
-          <div className="gap-y-5 flex flex-col items-center justify-center max-w-screen-xl bg-neutral-100 dark:bg-neutral-950 transition-colors ease-in-out duration-500">
+          <div className="pt-8 gap-y-5 flex flex-col items-center justify-center max-w-screen-xl bg-neutral-100 dark:bg-neutral-950 transition-colors ease-in-out duration-500">
             {watchCards}
           </div>
         </div>
@@ -244,21 +258,21 @@ export default function Home() {
 
         {/* About Site Section */}
         <div id='About' className="px-5 md:px-20 gap-y-4 flex flex-col items-start max-w-screen-xl bg-neutral-100 dark:bg-neutral-950 transition-colors ease-in-out duration-500 py-8">
-          <h2 className="pt-10 pb-2 text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl text-black dark:text-neutral-200 transition-colors ease-in-out duration-500">About this Site</h2>
+          <h2 className="pt-10 pb-2 text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl text-black dark:text-neutral-200 transition-colors ease-in-out duration-500">About this Site</h2>
           <h3 className="pb-2 text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl text-black dark:text-neutral-200 transition-colors ease-in-out duration-500">The Tech</h3>
-          <p id='About' className="sm:text-xl md:text-2xl text-black dark:text-neutral-200 transition-colors ease-in-out duration-500">
+          <p className="text-sm sm:text-xl md:text-2xl text-black dark:text-neutral-200 transition-colors ease-in-out duration-500">
             This site was build in React/Next.js and uses the Tailwind CSS to provide a responsive UI. The site is hosted on GitHub Pages and deployed through a GitHub Actions CI/CD Pipeline; it is subject to the limitations of that platform.
             </p>
-          <p id='About' className="sm:text-xl md:text-2xl text-black dark:text-neutral-200 transition-colors ease-in-out duration-500">
+          <p className="text-sm sm:text-xl md:text-2xl text-black dark:text-neutral-200 transition-colors ease-in-out duration-500">
             It uses the Framer Motion library for the "sliding pill" effect on the menu bar at the top of the screen.
           </p>
           <h3 className="pt-10 pb-2 text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl text-black dark:text-neutral-200 transition-colors ease-in-out duration-500">The Idea</h3>
-          <p className="sm:text-xl md:text-2xl text-black dark:text-neutral-200 transition-colors ease-in-out duration-500">
+          <p className="text-sm sm:text-xl md:text-2xl text-black dark:text-neutral-200 transition-colors ease-in-out duration-500">
             It is subject to change in content and format at any time as updates to information and content may arise and I come up with different ideas. 
             Expect to see new functionality added in the future such as more detail, more pages, more features on the existing page, and code optimization.
             This site is designed to demonstrate my understanding of web development and responsive UI design principles and to showcase my projects and creations.
           </p>
-          <p className="sm:text-xl md:text-2xl text-black dark:text-neutral-200 transition-colors ease-in-out duration-500">
+          <p className="text-sm sm:text-xl md:text-2xl text-black dark:text-neutral-200 transition-colors ease-in-out duration-500">
             The site is intended to be simple, clean, with a little bit of fun flair in the design in some places. No template was used for this site, it was built from scratch.
           </p>
           <div className="flex flex-row items-center justify-center w-full h-fit space-x-4 px-4 py-4">
