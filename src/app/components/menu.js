@@ -102,7 +102,7 @@ export const Menu = ({ sections, containerId }) => {
               containerId={containerId}
               spy={true}
               smooth={true}
-              offset={-200} 
+              offset={-400} 
               duration={500}
               onSetActive={handleSetActive}
               onClick={() => handleScrollTo(section.id)}

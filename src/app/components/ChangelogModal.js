@@ -50,6 +50,11 @@ const Modal = ({ isShowing, hide }) => isShowing ? ReactDOM.createPortal(
                 <p className="text-xs md:text-base 2xl:text-lg text-black dark:text-neutral-200">
                     Added a new watch face: altimeter watch face.
                 </p>
+                <h3 className="text-sm md:text-lg 2xl:text-lg font-semibold mt-2 mb-1 md:mt-4 text-black dark:text-neutral-200">2/12/2025: </h3>
+                <p className="text-xs md:text-base 2xl:text-lg text-black dark:text-neutral-200">
+                    Wow where to begin, almost everything has been changed into a new format. The site's tech stack remains the same, although I considered no longer using Tailwind as I have gotten better at vanilla CSS and realize how hard Tailwind class names can be to maintain.
+                    The new style looks a bit cleaner and is more engaging while showing more detail and information than before. Expect more changes in the future as I continue to learn new things and improve my skills and change my mind on some of the styling.
+                </p>
             </div>
             <button
                 className="bg-red-500 hover:bg-red-800 hover:scale-105 text-white font-bold py-2 px-4 rounded transition ease-in-out duration-500 w-1/2 self-center"

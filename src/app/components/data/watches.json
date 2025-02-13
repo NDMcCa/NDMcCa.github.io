@@ -1,0 +1,34 @@
+[
+    {
+      "title": "Charger Watch",
+      "img": "/chargerwatch.png",
+      "description": "Inspired by the speedometer of a 2011 Dodge Charger (grey LCD EVIC display). Comlications include: date, current tempurature, and battery percentage.",
+      "tags": "Development Environment: Watch Face Studio",
+      "link": "",
+      "key": "1"
+    },
+    {
+      "title": "Star Trek Watch",
+      "img": "/stwatch.png",
+      "description": "Inspired by the 23rd century \"Okudagrams\" of Star Trek. Complications include: temp/feels-like temp, date, two world clocks, and 4 mapped buttons on the left",
+      "tags": "Development Environment: Watch Face Studio",
+      "link": "",
+      "key": "2"
+    },
+    {
+      "title": "Hard Disk Watch",
+      "img": "/hddwatch.png",
+      "description": "Two analog hands, minute and hour, superimposed over an artistic drawing of an HDD. I did not design this drawing myself.",
+      "tags": "Development Environment: Watch Face Studio",
+      "link": "",
+      "key": "3"
+    },
+    {
+      "title": "Altimeter Watch",
+      "img": "/altwatch.png",
+      "description": "Inspired by an electromechanical altimeter. Basic understanding altimeters may be needed understand this watch face.",
+      "tags": "Development Environment: Watch Face Studio",
+      "link": "",
+      "key": "4"
+    }
+  ]
