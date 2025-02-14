@@ -1,4 +1,4 @@
-import osk from "../../images/osk.jpg";
+import osk from "../../../images/osk.jpg";
 import Image from 'next/image';
 
 const download = () => {
