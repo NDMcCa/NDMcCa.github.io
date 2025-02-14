@@ -1,12 +1,13 @@
 [
     {
-      "title": "'ndmcca.github.io' (this website)",
+      "title": "GitHub Pages Portfolio",
       "img": "",
       "description": "This website indeed is an actual project of mine, built from the ground up",
       "tags": "JavaScript, Tailwind CSS, Node.JS, React (Next.js), CI/CD Pipeline",
       "icons": "javascript react next tailwind",
       "langs": "JavaScript CSS",
       "percentages": "97 3",
+      "colors": "rgb(154,155,78) rgb(68,67,129)",
       "link": "https://github.com/NDMcCa/NDMcCa.github.io",
       "key": 1
     },
@@ -18,6 +19,7 @@
       "icons": "java",
       "langs": "Java",
       "percentages": "100",
+      "colors": "orange",
       "link": "https://github.com/kingsleyzhong/seng300-iteration3",
       "key": 2
     },
@@ -27,20 +29,10 @@
       "description": "A mock ecommerce web application for buying, selling, and trading video games. Built with SvelteKit and TypeScript with a MySQL database containerized in Docker.",
       "tags": "Svelte, SvelteKit, TypeScript, SCSS, Docker, MySQL",
       "icons": "typescript svelte mysql docker",
-      "Langs": "TypeScript Svelte Other",
+      "langs": "TypeScript Svelte Other",
       "percentages": "52 46 2",
+      "colors": "rgb(0,113,179) orangered rgb(151,151,151)",
       "link": "https://github.com/NDMcCa/GameSwap--CPSC-471-Project-",
       "key": 3
-    },
-    {
-      "title": "Screenshot Deleter",
-      "img": "",
-      "description": "An executable Python script that runs to purge that pesky Windows screenshot folder that fills up over time.",
-      "tags": "Python, PyInstaller",
-      "icons": "python",
-      "langs": "Python",
-      "percentages": "100",
-      "link": "https://github.com/NDMcCa/Screenshot_Deleter",
-      "key": 4
     }
   ]

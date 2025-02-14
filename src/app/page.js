@@ -62,11 +62,17 @@ export default function Home() {
 
   const projectCards = projects.map((project, index) => {
     const icons = project.icons.split(' ').map(iconName => iconMap[iconName.toLowerCase()]);
+    const langs = project.langs.split(' ').map(lang => lang);
+    const percentages = project.percentages.split(' ').map(percentage => parseInt(percentage));
+    const colors = project.colors.split(' ');
     return <ProjectCard 
       title={project.title}
       tags={project.tags}
       description={project.description}
       icons={icons}
+      languages={langs}
+      percentages={percentages}
+      colors={colors}
       link={project.link}
       key={index}
     />
