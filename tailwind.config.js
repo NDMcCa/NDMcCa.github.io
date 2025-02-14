@@ -40,13 +40,20 @@ module.exports = {
       },
       transitionTimingFunction: {
         "ease-in-out": "ease-in-out",
-      }
+      },
+      height: {
+        'expand': '130%', // Adjust this value as needed
+      },
+      transitionProperty: {
+        'height': 'height',
+      },
     },
   },
   variants: {
     extend: {
       maskImage: ['dark'],
       webkitMaskImage: ['dark'],
+      height: ['hover']
     },
   },
   plugins: [],

@@ -6,7 +6,7 @@
       "tags": "JavaScript, Tailwind CSS, Node.JS, React (Next.js), CI/CD Pipeline",
       "icons": "javascript react next tailwind",
       "langs": "JavaScript CSS",
-      "percentages": "97 3",
+      "percentages": "90 10",
       "colors": "rgb(154,155,78) rgb(68,67,129)",
       "link": "https://github.com/NDMcCa/NDMcCa.github.io",
       "key": 1
@@ -30,7 +30,7 @@
       "tags": "Svelte, SvelteKit, TypeScript, SCSS, Docker, MySQL",
       "icons": "typescript svelte mysql docker",
       "langs": "TypeScript Svelte Other",
-      "percentages": "52 46 2",
+      "percentages": "52 38 10",
       "colors": "rgb(0,113,179) orangered rgb(151,151,151)",
       "link": "https://github.com/NDMcCa/GameSwap--CPSC-471-Project-",
       "key": 3
