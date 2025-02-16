@@ -4,19 +4,19 @@ import { motion } from 'framer-motion';
 
 const Modal = ({ isShowing, hide }) => isShowing ? ReactDOM.createPortal(
     <motion.div
-        className="fixed inset-0 z-50 flex justify-center items-center bg-black bg-opacity-50"
+        className="fixed inset-0 z-50 flex justify-center items-center bg-black/30"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
     >
         <motion.div
-            className="flex flex-col justify-start bg-white dark:bg-themed-dark outline outline-2 outline-neutral-400 dark:outline-themed-light p-4 rounded-lg w-3/4 lg:w-2/3 2xl:w-1/3 h-5/6 space-y-2 bg-opacity-30"
+            className="flex flex-col justify-start bg-white dark:bg-themed-dark/40 outline outline-2 outline-neutral-400 dark:outline-themed-light p-4 rounded-lg w-3/4 lg:w-2/3 2xl:w-1/3 h-5/6 space-y-2 backdrop-blur-sm"
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             exit={{ scale: 0 }}
         >
             <h2 className="text-3xl font-bold font-roboto text-black dark:text-themed-light ">Changelog</h2>
-            <div className="overflow-y-scroll w-full h-full max-h-2/3 px-1 py-2 md:px-4 2xl:px-4 2xl:py-4 text-black dark:text-themed-light">
+            <div className="overflow-y-scroll w-full h-full max-h-2/3 px-1 py-2 md:px-4 2xl:px-4 2xl:py-4 text-black dark:text-themed-light border-t-2 border-themed-light">
                 <h3 className="text-sm md:text-lg 2xl:text-lg font-semibold mt-2 mb-1 text-black dark:text-themed-light">06/02/2024: </h3>
                 <p className="text-xs md:text-base 2xl:text-lg text-black dark:text-themed-light">
                     Deployment of initial version of Next.js/Tailwind CSS site featuring responsive UI with light/dark mode. 

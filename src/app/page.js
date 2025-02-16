@@ -110,7 +110,7 @@ export default function Home() {
         <div id="Home" className="flex flex-col items-center justify-center h-screen max-w-screen-xl bg-themed-light dark:bg-themed-dark transition-colors ease-in-out duration-500">
 
           {/* Divide part of this into rows */}
-          <div className="flex flex-row items-center justify-center h-fit w-full bg-none px-2 gap-x-6 md:gap-x-0 md:px-10 xl:px-0">
+          <div className="flex flex-row items-center justify-center h-fit w-full bg-none pt-4 px-2 gap-x-6 md:gap-x-0 md:px-10 xl:px-0">
 
             {/* Contact card */}
             <ContactCard />
