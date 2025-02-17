@@ -248,6 +248,7 @@ export default function Home() {
             All projects are available for viewing in repositories. Click on the items below to see more.
           </p>
           {projectCards}
+          <Image src="https://github-readme-stats.vercel.app/api/top-langs/?username=NDMcCa&hide_progress=false&theme=dark&layout=compact" width={400} height={300} alt="Lang Stats" unoptimized={true}/>
         </div>
 
 
