@@ -96,18 +96,19 @@ export default function Home() {
 
   // I have used a lot of comments in the following render of the main page because honestly Tailwind CSS makes it hard to read the JSX
   return (
-    <main id="page" className="overflow-y-scroll max-lg:snap-y max-lg:snap-mandatory bg-neutral-100 dark:bg-themed-dark transition-colors ease-in-out duration-500 h-screen w-screen" >
+    <main id="page" className="overflow-y-scroll max-lg:snap-y max-lg:snap-mandatory bg-neutral-100 dark:bg-themed-dark transition-colors ease-in-out duration-500 min-h-screen w-screen" >
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
       integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
       crossOrigin="anonymous" referrerPolicy="no-referrer" />
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" />
       <div className="fixed top-0 flex items-center justify-center w-full bg-neutral-300 dark:bg-neutral-900 h-fit py-3 transition-colors ease-in-out duration-500 z-50">
         <Menu sections={sections} containerId="page" />
       </div>
-      <div className="flex flex-col items-center justify-center h-fit w-screen">
+      <div className="flex flex-col items-center justify-center h-fit w-screen pt-20">
 
 
         {/* Home Section */}
-        <div id="Home" className="flex flex-col items-center justify-center h-screen max-w-screen-xl bg-themed-light dark:bg-themed-dark transition-colors ease-in-out duration-500">
+        <div id="Home" className="flex flex-col items-center justify-center min-h-screen max-w-screen-xl bg-themed-light dark:bg-themed-dark transition-colors ease-in-out duration-500">
 
           {/* Divide part of this into rows */}
           <div className="flex flex-row items-center justify-center h-fit w-full bg-none pt-4 px-2 gap-x-6 md:gap-x-0 md:px-10 xl:px-0">
@@ -116,8 +117,8 @@ export default function Home() {
             <ContactCard />
 
             {/* Stack the actual content */}
-            <div className="flex flex-col items-center justify-center gap-y-4 h-full w-fit md:w-1/2 bg-neutral-100 dark:bg-themed-dark transition-colors ease-in-out duration-500">
-              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl text-black dark:text-themed-light transition-colors ease-in-out duration-500">
+            {/* <div className="flex flex-col items-center justify-center gap-y-4 h-full w-fit md:w-1/2 bg-neutral-100 dark:bg-themed-dark transition-colors ease-in-out duration-500">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-6xl text-black dark:text-themed-light transition-colors ease-in-out duration-500">
                 Nicholas McCamis
               </h1>
               <ul className="flex flex-col items-start justify-center gap-2 list-custom">
@@ -142,7 +143,7 @@ export default function Home() {
                   </p>
                 </li>
               </ul>
-            </div>
+            </div> */}
           </div>
           <div className="md:hidden flex flex-row items-center justify-center gap-x-10 pt-3 h-fit w-fit">
             <a href="https://github.com/NDMcCa" className="flex flex-row items-center justify-center space-x-2" >
@@ -240,7 +241,7 @@ export default function Home() {
 
 
         {/* Dev Work Section */}
-        <div id="Dev Work" className="px-5 md:px-20 gap-y-5 flex flex-col items-start justify-center h-screen max-w-screen-xl bg-neutral-100 dark:bg-themed-dark transition-colors ease-in-out duration-500">
+        <div id="Dev Work" className="px-5 md:px-20 gap-y-5 flex flex-col items-start justify-center min-h-screen max-w-screen-xl bg-neutral-100 dark:bg-themed-dark transition-colors ease-in-out duration-500">
           <h2 className="pt-10 md:pb-2 text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl text-black dark:text-themed-light transition-colors ease-in-out duration-500">
               Developer Work
           </h2>
@@ -248,7 +249,6 @@ export default function Home() {
             All projects are available for viewing in repositories. Click on the items below to see more.
           </p>
           {projectCards}
-          <Image src="https://github-readme-stats.vercel.app/api/top-langs/?username=NDMcCa&hide_progress=false&theme=dark&layout=compact" width={400} height={300} alt="Lang Stats" unoptimized={true}/>
         </div>
 
 

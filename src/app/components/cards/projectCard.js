@@ -8,7 +8,7 @@ export default function ProjectCard (props) {
 
     function LangTab ({ size, color, lang }) {
         return (
-            <div className="h-1/2 pt-3 hover:h-expand transition-height duration-300 px-2 select-none cursor-pointer" style={{ width: `${size}%`, backgroundColor: color }}>
+            <div className="h-1/2 pt-3 hover:h-expand transition-height duration-300 px-2 select-none font-ubuntu" style={{ width: `${size}%`, backgroundColor: color }}>
                 <p >{lang}</p>
             </div>
         )
