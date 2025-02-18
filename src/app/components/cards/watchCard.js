@@ -2,7 +2,7 @@ import Image from "next/image";
 
 function WatchCard (props){
     return (
-        <div className="flex flex-row w-full h-fit shadow-md items-center overflow-hidden bg-neutral-800 dark:bg-themed-dark outline outline-2 outline-neutral-400 dark:outline-themed-light
+        <div className="flex flex-row w-full h-fit shadow-md items-center overflow-hidden bg-neutral-800 dark:bg-themed-mid outline outline-2 outline-neutral-400 dark:outline-themed-light
         rounded-lg transition ease-in-out duration-500 shadow-md shadow-neutral-400 dark:shadow-black">
             <Image src={props.img} alt={props.title} width={150} height={150} className="block md:hidden"/>
             <Image src={props.img} alt={props.title} width={200} height={200} className="hidden md:block"/>

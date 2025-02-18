@@ -164,15 +164,12 @@ export default function Home() {
           <div className="px-5 md:px-20">
 
             {/* About */}        
-            <h2 className="pt-3 md:pt-10 pb-2 text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl text-black dark:text-themed-light transition-colors ease-in-out duration-500">
-              Who am I?
-            </h2>
-            <p className="text-xs sm:text-sm md:text-m lg:text-lg xl:text-xl 2xl:text-2xl text-black dark:text-themed-light transition-colors ease-in-out duration-500">
+            <p className="pt-10 text-xs sm:text-sm md:text-m lg:text-lg xl:text-xl 2xl:text-2xl text-black dark:text-themed-light transition-colors ease-in-out duration-500">
               I am a software developer, designer, tech enthusias, and 4th year Computer Science at the University of Calgary. I have a passion for creating and learning new things. I am always looking for new opportunities to grow and expand my skillset.
             </p>
 
             {/* Dev Tech */}
-            <h2 className="pt-10 pb-2 text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl text-black dark:text-themed-light transition-colors ease-in-out duration-500">
+            <h2 className="pt-10 pb-2 text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl text-black dark:text-themed-light transition-colors ease-in-out duration-500">
               Developer Technologies
             </h2>
             <p className="text-xs sm:text-sm md:text-m lg:text-lg xl:text-xl 2xl:text-2xl text-black dark:text-themed-light transition-colors ease-in-out duration-500">
@@ -183,53 +180,53 @@ export default function Home() {
             <div className="flex flex-col items-center justify-center gap-y-10 py-8">
               <div className="flex flex-row flex-wrap items-center justify-center gap-4 sm:gap-6 md:gap-8 lg:gap-12">
                 <div className="relative flex flex-col items-center">
-                  <Image src={python} alt="Python 3" className="h-10 w-10 sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 xl:h-28 xl:w-28 filter grayscale dark:invert transition-transform duration-300 hover:scale-110" onMouseEnter={() => setHoveredIcon('Python 3')} onMouseLeave={() => setHoveredIcon(null)} />
+                  <Image src={python} alt="Python 3" className="h-10 w-10 sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 filter grayscale dark:invert transition-transform duration-300 hover:scale-110" onMouseEnter={() => setHoveredIcon('Python 3')} onMouseLeave={() => setHoveredIcon(null)} />
                   {hoveredIcon === 'Python 3' && <span className="absolute top-full mt-2 text-sm text-black dark:text-themed-light">{hoveredIcon}</span>}
                 </div>
                 <div className="relative flex flex-col items-center">
-                  <Image src={java} alt="Java" className="h-10 w-10 sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 xl:h-28 xl:w-28 filter grayscale dark:invert transition-transform duration-300 hover:scale-110" onMouseEnter={() => setHoveredIcon('Java')} onMouseLeave={() => setHoveredIcon(null)} />
+                  <Image src={java} alt="Java" className="h-10 w-10 sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 filter grayscale dark:invert transition-transform duration-300 hover:scale-110" onMouseEnter={() => setHoveredIcon('Java')} onMouseLeave={() => setHoveredIcon(null)} />
                   {hoveredIcon === 'Java' && <span className="absolute top-full mt-2 text-sm text-black dark:text-themed-light">{hoveredIcon}</span>}
                 </div>
                 <div className="relative flex flex-col items-center">
-                  <Image src={js} alt="JavaScript" className="h-10 w-10 sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 xl:h-28 xl:w-28 filter grayscale dark:invert transition-transform duration-300 hover:scale-110" onMouseEnter={() => setHoveredIcon('JavaScript')} onMouseLeave={() => setHoveredIcon(null)} />
+                  <Image src={js} alt="JavaScript" className="h-10 w-10 sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 filter grayscale dark:invert transition-transform duration-300 hover:scale-110" onMouseEnter={() => setHoveredIcon('JavaScript')} onMouseLeave={() => setHoveredIcon(null)} />
                   {hoveredIcon === 'JavaScript' && <span className="absolute top-full mt-2 text-sm text-black dark:text-themed-light">{hoveredIcon}</span>}
                 </div>
                 <div className="relative flex flex-col items-center">
-                  <Image src={ts} alt="TypeScript" className="h-10 w-10 sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 xl:h-28 xl:w-28 filter grayscale dark:invert transition-transform duration-300 hover:scale-110" onMouseEnter={() => setHoveredIcon('TypeScript')} onMouseLeave={() => setHoveredIcon(null)} />
+                  <Image src={ts} alt="TypeScript" className="h-10 w-10 sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 filter grayscale dark:invert transition-transform duration-300 hover:scale-110" onMouseEnter={() => setHoveredIcon('TypeScript')} onMouseLeave={() => setHoveredIcon(null)} />
                   {hoveredIcon === 'TypeScript' && <span className="absolute top-full mt-2 text-sm text-black dark:text-themed-light">{hoveredIcon}</span>}
                 </div>
                 <div className="relative flex flex-col items-center">
-                  <Image src={cpp} alt="C++" className="h-10 w-10 sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 xl:h-28 xl:w-28 filter grayscale dark:invert transition-transform duration-300 hover:scale-110" onMouseEnter={() => setHoveredIcon('C++')} onMouseLeave={() => setHoveredIcon(null)} />
+                  <Image src={cpp} alt="C++" className="h-10 w-10 sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 filter grayscale dark:invert transition-transform duration-300 hover:scale-110" onMouseEnter={() => setHoveredIcon('C++')} onMouseLeave={() => setHoveredIcon(null)} />
                   {hoveredIcon === 'C++' && <span className="absolute top-full mt-2 text-sm text-black dark:text-themed-light">{hoveredIcon}</span>}
                 </div>
                 <div className="relative flex flex-col items-center">
-                  <Image src={c} alt="C" className="h-10 w-10 sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 xl:h-28 xl:w-28 filter grayscale dark:invert transition-transform duration-300 hover:scale-110" onMouseEnter={() => setHoveredIcon('C')} onMouseLeave={() => setHoveredIcon(null)} />
+                  <Image src={c} alt="C" className="h-10 w-10 sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 filter grayscale dark:invert transition-transform duration-300 hover:scale-110" onMouseEnter={() => setHoveredIcon('C')} onMouseLeave={() => setHoveredIcon(null)} />
                   {hoveredIcon === 'C' && <span className="absolute top-full mt-2 text-sm text-black dark:text-themed-light">{hoveredIcon}</span>}
                 </div>
               </div>
               <div className="flex flex-row flex-wrap items-center justify-center gap-4 sm:gap-6 md:gap-8 lg:gap-12">
                 <div className="relative flex flex-col items-center">
-                  <Image src={react} alt="React" className="h-10 w-10 sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 xl:h-28 xl:w-28 filter grayscale dark:invert transition-transform duration-300 hover:scale-110" onMouseEnter={() => setHoveredIcon('React')} onMouseLeave={() => setHoveredIcon(null)} />
+                  <Image src={react} alt="React" className="h-10 w-10 sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 filter grayscale dark:invert transition-transform duration-300 hover:scale-110" onMouseEnter={() => setHoveredIcon('React')} onMouseLeave={() => setHoveredIcon(null)} />
                   {hoveredIcon === 'React' && <span className="absolute top-full mt-2 text-sm text-black dark:text-themed-light">{hoveredIcon}</span>}
                 </div>
                 <div className="relative flex flex-col items-center">
-                  <Image src={next} alt="Next.js" className="h-10 w-10 sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 xl:h-28 xl:w-28 filter grayscale dark:invert transition-transform duration-300 hover:scale-110" onMouseEnter={() => setHoveredIcon('Next.js')} onMouseLeave={() => setHoveredIcon(null)} />
+                  <Image src={next} alt="Next.js" className="h-10 w-10 sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 filter grayscale dark:invert transition-transform duration-300 hover:scale-110" onMouseEnter={() => setHoveredIcon('Next.js')} onMouseLeave={() => setHoveredIcon(null)} />
                   {hoveredIcon === 'Next.js' && <span className="absolute top-full mt-2 text-sm text-black dark:text-themed-light">{hoveredIcon}</span>}
                 </div>
                 <div className="relative flex flex-col items-center">
-                  <Image src={svelte} alt="Svelte" className="h-10 w-10 sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 xl:h-28 xl:w-28 filter grayscale dark:invert transition-transform duration-300 hover:scale-110" onMouseEnter={() => setHoveredIcon('Svelte')} onMouseLeave={() => setHoveredIcon(null)} />
+                  <Image src={svelte} alt="Svelte" className="h-10 w-10 sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 filter grayscale dark:invert transition-transform duration-300 hover:scale-110" onMouseEnter={() => setHoveredIcon('Svelte')} onMouseLeave={() => setHoveredIcon(null)} />
                   {hoveredIcon === 'Svelte' && <span className="absolute top-full mt-2 text-sm text-black dark:text-themed-light">{hoveredIcon}</span>}
                 </div>
                 <div className="relative flex flex-col items-center">
-                  <Image src={tw} alt="Tailwind CSS" className="h-10 w-10 sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 xl:h-28 xl:w-28 filter grayscale dark:invert transition-transform duration-300 hover:scale-110" onMouseEnter={() => setHoveredIcon('Tailwind CSS')} onMouseLeave={() => setHoveredIcon(null)} />
+                  <Image src={tw} alt="Tailwind CSS" className="h-10 w-10 sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 filter grayscale dark:invert transition-transform duration-300 hover:scale-110" onMouseEnter={() => setHoveredIcon('Tailwind CSS')} onMouseLeave={() => setHoveredIcon(null)} />
                   {hoveredIcon === 'Tailwind CSS' && <span className="absolute top-full mt-2 text-sm text-black dark:text-themed-light">{hoveredIcon}</span>}
                 </div>
                 <div className="relative flex flex-col items-center">
-                  <Image src={docker} alt="Docker" className="h-10 w-10 sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 xl:h-28 xl:w-28 filter grayscale dark:invert transition-transform duration-300 hover:scale-110" onMouseEnter={() => setHoveredIcon('Docker')} onMouseLeave={() => setHoveredIcon(null)} />
+                  <Image src={docker} alt="Docker" className="h-10 w-10 sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 filter grayscale dark:invert transition-transform duration-300 hover:scale-110" onMouseEnter={() => setHoveredIcon('Docker')} onMouseLeave={() => setHoveredIcon(null)} />
                   {hoveredIcon === 'Docker' && <span className="absolute top-full mt-2 text-sm text-black dark:text-themed-light">{hoveredIcon}</span>}
                 </div>
                 <div className="relative flex flex-col items-center">
-                  <Image src={mysql} alt="MySQL" className="h-10 w-10 sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 xl:h-28 xl:w-28 filter grayscale dark:invert transition-transform duration-300 hover:scale-110" onMouseEnter={() => setHoveredIcon('MySQL')} onMouseLeave={() => setHoveredIcon(null)} />
+                  <Image src={mysql} alt="MySQL" className="h-10 w-10 sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 filter grayscale dark:invert transition-transform duration-300 hover:scale-110" onMouseEnter={() => setHoveredIcon('MySQL')} onMouseLeave={() => setHoveredIcon(null)} />
                   {hoveredIcon === 'MySQL' && <span className="absolute top-full mt-2 text-sm text-black dark:text-themed-light">{hoveredIcon}</span>}
                 </div>
               </div>
@@ -242,7 +239,7 @@ export default function Home() {
 
         {/* Dev Work Section */}
         <div id="Dev Work" className="px-5 md:px-20 gap-y-5 flex flex-col items-start justify-center min-h-screen max-w-screen-xl bg-neutral-100 dark:bg-themed-dark transition-colors ease-in-out duration-500">
-          <h2 className="pt-10 md:pb-2 text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl text-black dark:text-themed-light transition-colors ease-in-out duration-500">
+          <h2 className="pt-10 md:pb-2 text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl text-black dark:text-themed-light transition-colors ease-in-out duration-500">
               Developer Work
           </h2>
           <p className="pb-10 text-xs sm:text-xl md:text-xl xl:text-3xl 2xl:text-2xl text-black dark:text-themed-light transition-colors ease-in-out duration-500">Below is a collection of some of my projects from micro projects to large projects developed on a team of 20 developers. This collection spans from front end React/JSX development to fully Object-Oriented back end Java code. 
@@ -254,29 +251,29 @@ export default function Home() {
 
         {/* Creations Section */}
         <div id='Creations' className="px-5 md:px-20 flex flex-col items-start max-w-screen-xl bg-neutral-100 dark:bg-themed-dark transition-colors ease-in-out duration-500 py-8 mb-32">
-          <h2 className="pt-10 pb-2 text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl text-black dark:text-themed-light transition-colors ease-in-out duration-500">Creations</h2>
-          <h3 className="pt-10 pb-2 text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl text-black dark:text-themed-light transition-colors ease-in-out duration-500">WearOS Watch Faces</h3>
+          <h2 className="pt-10 pb-2 text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl text-black dark:text-themed-light transition-colors ease-in-out duration-500">Creations</h2>
+          <h3 className="pt-6 pb-2 text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl text-black dark:text-themed-light transition-colors ease-in-out duration-500">WearOS Watch Faces</h3>
           <p className="text-xs sm:text-xl md:text-xl xl:text-3xl 2xl:text-2xl text-black dark:text-themed-light mb-4">I have created a few watch faces for the Wear OS platform. I have always been interested in the idea of creating a watch face and I have been able to create a few that I am proud of.</p>
           <p className="text-xs sm:text-xl md:text-xl xl:text-3xl 2xl:text-2xl text-black dark:text-themed-light mb-4">To date, I have only created watch faces using Watch Face Studio, although I am looking to expand my knowledge of Android Studio which would enable me to create more complex watch faces in the future.</p>
           <div className="pt-8 gap-y-5 flex flex-col items-center justify-center max-w-screen-xl bg-neutral-100 dark:bg-themed-dark transition-colors ease-in-out duration-500">
             {watchCards}
           </div>
-          <h3 className="pt-10 pb-2 text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl text-black dark:text-themed-light transition-colors ease-in-out duration-500">Binary Clock</h3>
+          <h3 className="pt-10 pb-2 text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl text-black dark:text-themed-light transition-colors ease-in-out duration-500">Binary Clock</h3>
           <p className="text-xs sm:text-xl md:text-xl xl:text-3xl 2xl:text-2xl text-black dark:text-themed-light mb-4">This is where I will put a brief explanation of what this clock is, how to read it, and how it works. I will put a popup modal here to actually show it in action and link to more info about these clocks</p>
         </div>
 
 
         {/* About Site Section */}
         <div id='About' className="px-5 md:px-20 gap-y-4 flex flex-col items-start max-w-screen-xl bg-neutral-100 dark:bg-themed-dark transition-colors ease-in-out duration-500 py-8">
-          <h2 className="pt-10 pb-2 text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl text-black dark:text-themed-light transition-colors ease-in-out duration-500">About this Site</h2>
-          <h3 className="pb-2 text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl text-black dark:text-themed-light transition-colors ease-in-out duration-500">The Tech</h3>
+          <h2 className="pt-10 pb-2 text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl text-black dark:text-themed-light transition-colors ease-in-out duration-500">About this Site</h2>
+          <h3 className="pb-2 text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl text-black dark:text-themed-light transition-colors ease-in-out duration-500">The Tech</h3>
           <p className="text-sm sm:text-xl md:text-2xl text-black dark:text-themed-light transition-colors ease-in-out duration-500">
             This site was build in React/Next.js and uses the Tailwind CSS to provide a responsive UI. The site is hosted on GitHub Pages and deployed through a GitHub Actions CI/CD Pipeline; it is subject to the limitations of that platform.
             </p>
           <p className="text-sm sm:text-xl md:text-2xl text-black dark:text-themed-light transition-colors ease-in-out duration-500">
             It uses the Framer Motion library for the "sliding pill" effect on the menu bar at the top of the screen, and some of the other animations used.
           </p>
-          <h3 className="pt-10 pb-2 text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl text-black dark:text-themed-light transition-colors ease-in-out duration-500">The Idea</h3>
+          <h3 className="pt-10 pb-2 text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl text-black dark:text-themed-light transition-colors ease-in-out duration-500">The Idea</h3>
           <p className="text-sm sm:text-xl md:text-2xl text-black dark:text-themed-light transition-colors ease-in-out duration-500">
             It is subject to change in content and format at any time as updates to information and content may arise and I come up with different ideas. 
             Expect to see new functionality added in the future such as more detail, more pages, more features on the existing page, and code optimization.
