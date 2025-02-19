@@ -9,7 +9,6 @@ export const Menu = ({ sections, containerId }) => {
   const containerRef = useRef(null);
 
   const [theme, setTheme] = useState('light');
-  
 
   // Dark mode functionality
   useEffect(() => {
