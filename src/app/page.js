@@ -5,7 +5,6 @@ import React, { useState } from "react";
 
 import { Menu } from './components/menu/menu.js';
 // DO NOT LISTEN TO THE LINTER HERE vvvvvvv
-// import BinClock from "./components/binClock.js";
 
 import Modal from "./components/other/ChangelogModal.js";
 
@@ -14,6 +13,7 @@ import projects from './components/data/projects.json';
 import watches from './components/data/watches.json';
 import WatchCard from './components/cards/watchCard.js';
 import ContactCard from './components/cards/ContactCard.js';
+import ClockCard from './components/cards/clockCard.js';
 
 import python from "../../public/python-5-logo-svg-vector.svg";
 import java from "../../public/java-14-logo-svg-vector.svg";
@@ -180,54 +180,54 @@ export default function Home() {
             <div className="flex flex-col items-center justify-center gap-y-10 py-8">
               <div className="flex flex-row flex-wrap items-center justify-center gap-4 sm:gap-6 md:gap-8 lg:gap-12">
                 <div className="relative flex flex-col items-center">
-                  <Image src={python} alt="Python 3" className="h-10 w-10 sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 filter grayscale dark:invert transition-transform duration-300 hover:scale-110" onMouseEnter={() => setHoveredIcon('Python 3')} onMouseLeave={() => setHoveredIcon(null)} />
-                  {hoveredIcon === 'Python 3' && <span className="absolute top-full mt-2 text-sm text-black dark:text-themed-light">{hoveredIcon}</span>}
+                  <Image src={python} alt="Python 3" className="h-10 w-10 sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 filter transition-transform duration-300 hover:scale-110" onMouseEnter={() => setHoveredIcon('Python 3')} onMouseLeave={() => setHoveredIcon(null)} />
+                  {hoveredIcon === 'Python 3' && <span className="absolute top-full mt-2 text-sm text-black dark:text-themed-light font-ubuntu">{hoveredIcon}</span>}
                 </div>
                 <div className="relative flex flex-col items-center">
-                  <Image src={java} alt="Java" className="h-10 w-10 sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 filter grayscale dark:invert transition-transform duration-300 hover:scale-110" onMouseEnter={() => setHoveredIcon('Java')} onMouseLeave={() => setHoveredIcon(null)} />
-                  {hoveredIcon === 'Java' && <span className="absolute top-full mt-2 text-sm text-black dark:text-themed-light">{hoveredIcon}</span>}
+                  <Image src={java} alt="Java" className="h-10 w-10 sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 filter transition-transform duration-300 hover:scale-110" onMouseEnter={() => setHoveredIcon('Java')} onMouseLeave={() => setHoveredIcon(null)} />
+                  {hoveredIcon === 'Java' && <span className="absolute top-full mt-2 text-sm text-black dark:text-themed-light font-ubuntu">{hoveredIcon}</span>}
                 </div>
                 <div className="relative flex flex-col items-center">
-                  <Image src={js} alt="JavaScript" className="h-10 w-10 sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 filter grayscale dark:invert transition-transform duration-300 hover:scale-110" onMouseEnter={() => setHoveredIcon('JavaScript')} onMouseLeave={() => setHoveredIcon(null)} />
-                  {hoveredIcon === 'JavaScript' && <span className="absolute top-full mt-2 text-sm text-black dark:text-themed-light">{hoveredIcon}</span>}
+                  <Image src={js} alt="JavaScript" className="h-10 w-10 sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 filter transition-transform duration-300 hover:scale-110" onMouseEnter={() => setHoveredIcon('JavaScript')} onMouseLeave={() => setHoveredIcon(null)} />
+                  {hoveredIcon === 'JavaScript' && <span className="absolute top-full mt-2 text-sm text-black dark:text-themed-light font-ubuntu">{hoveredIcon}</span>}
                 </div>
                 <div className="relative flex flex-col items-center">
-                  <Image src={ts} alt="TypeScript" className="h-10 w-10 sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 filter grayscale dark:invert transition-transform duration-300 hover:scale-110" onMouseEnter={() => setHoveredIcon('TypeScript')} onMouseLeave={() => setHoveredIcon(null)} />
-                  {hoveredIcon === 'TypeScript' && <span className="absolute top-full mt-2 text-sm text-black dark:text-themed-light">{hoveredIcon}</span>}
+                  <Image src={ts} alt="TypeScript" className="h-10 w-10 sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 filter transition-transform duration-300 hover:scale-110" onMouseEnter={() => setHoveredIcon('TypeScript')} onMouseLeave={() => setHoveredIcon(null)} />
+                  {hoveredIcon === 'TypeScript' && <span className="absolute top-full mt-2 text-sm text-black dark:text-themed-light font-ubuntu">{hoveredIcon}</span>}
                 </div>
                 <div className="relative flex flex-col items-center">
-                  <Image src={cpp} alt="C++" className="h-10 w-10 sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 filter grayscale dark:invert transition-transform duration-300 hover:scale-110" onMouseEnter={() => setHoveredIcon('C++')} onMouseLeave={() => setHoveredIcon(null)} />
-                  {hoveredIcon === 'C++' && <span className="absolute top-full mt-2 text-sm text-black dark:text-themed-light">{hoveredIcon}</span>}
+                  <Image src={cpp} alt="C++" className="h-10 w-10 sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 filter transition-transform duration-300 hover:scale-110" onMouseEnter={() => setHoveredIcon('C++')} onMouseLeave={() => setHoveredIcon(null)} />
+                  {hoveredIcon === 'C++' && <span className="absolute top-full mt-2 text-sm text-black dark:text-themed-light font-ubuntu">{hoveredIcon}</span>}
                 </div>
                 <div className="relative flex flex-col items-center">
-                  <Image src={c} alt="C" className="h-10 w-10 sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 filter grayscale dark:invert transition-transform duration-300 hover:scale-110" onMouseEnter={() => setHoveredIcon('C')} onMouseLeave={() => setHoveredIcon(null)} />
-                  {hoveredIcon === 'C' && <span className="absolute top-full mt-2 text-sm text-black dark:text-themed-light">{hoveredIcon}</span>}
+                  <Image src={c} alt="C" className="h-10 w-10 sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 filter transition-transform duration-300 hover:scale-110" onMouseEnter={() => setHoveredIcon('C')} onMouseLeave={() => setHoveredIcon(null)} />
+                  {hoveredIcon === 'C' && <span className="absolute top-full mt-2 text-sm text-black dark:text-themed-light font-ubuntu">{hoveredIcon}</span>}
                 </div>
               </div>
               <div className="flex flex-row flex-wrap items-center justify-center gap-4 sm:gap-6 md:gap-8 lg:gap-12">
                 <div className="relative flex flex-col items-center">
-                  <Image src={react} alt="React" className="h-10 w-10 sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 filter grayscale dark:invert transition-transform duration-300 hover:scale-110" onMouseEnter={() => setHoveredIcon('React')} onMouseLeave={() => setHoveredIcon(null)} />
-                  {hoveredIcon === 'React' && <span className="absolute top-full mt-2 text-sm text-black dark:text-themed-light">{hoveredIcon}</span>}
+                  <Image src={react} alt="React" className="h-10 w-10 sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 filter transition-transform duration-300 hover:scale-110" onMouseEnter={() => setHoveredIcon('React')} onMouseLeave={() => setHoveredIcon(null)} />
+                  {hoveredIcon === 'React' && <span className="absolute top-full mt-2 text-sm text-black dark:text-themed-light font-ubuntu">{hoveredIcon}</span>}
                 </div>
                 <div className="relative flex flex-col items-center">
-                  <Image src={next} alt="Next.js" className="h-10 w-10 sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 filter grayscale dark:invert transition-transform duration-300 hover:scale-110" onMouseEnter={() => setHoveredIcon('Next.js')} onMouseLeave={() => setHoveredIcon(null)} />
-                  {hoveredIcon === 'Next.js' && <span className="absolute top-full mt-2 text-sm text-black dark:text-themed-light">{hoveredIcon}</span>}
+                  <Image src={next} alt="Next.js" className="h-10 w-10 sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 filter transition-transform duration-300 hover:scale-110" onMouseEnter={() => setHoveredIcon('Next.js')} onMouseLeave={() => setHoveredIcon(null)} />
+                  {hoveredIcon === 'Next.js' && <span className="absolute top-full mt-2 text-sm text-black dark:text-themed-light font-ubuntu">{hoveredIcon}</span>}
                 </div>
                 <div className="relative flex flex-col items-center">
-                  <Image src={svelte} alt="Svelte" className="h-10 w-10 sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 filter grayscale dark:invert transition-transform duration-300 hover:scale-110" onMouseEnter={() => setHoveredIcon('Svelte')} onMouseLeave={() => setHoveredIcon(null)} />
-                  {hoveredIcon === 'Svelte' && <span className="absolute top-full mt-2 text-sm text-black dark:text-themed-light">{hoveredIcon}</span>}
+                  <Image src={svelte} alt="Svelte" className="h-10 w-10 sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 filter transition-transform duration-300 hover:scale-110" onMouseEnter={() => setHoveredIcon('Svelte')} onMouseLeave={() => setHoveredIcon(null)} />
+                  {hoveredIcon === 'Svelte' && <span className="absolute top-full mt-2 text-sm text-black dark:text-themed-light font-ubuntu">{hoveredIcon}</span>}
                 </div>
                 <div className="relative flex flex-col items-center">
-                  <Image src={tw} alt="Tailwind CSS" className="h-10 w-10 sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 filter grayscale dark:invert transition-transform duration-300 hover:scale-110" onMouseEnter={() => setHoveredIcon('Tailwind CSS')} onMouseLeave={() => setHoveredIcon(null)} />
-                  {hoveredIcon === 'Tailwind CSS' && <span className="absolute top-full mt-2 text-sm text-black dark:text-themed-light">{hoveredIcon}</span>}
+                  <Image src={tw} alt="Tailwind CSS" className="h-10 w-10 sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 filter transition-transform duration-300 hover:scale-110" onMouseEnter={() => setHoveredIcon('Tailwind CSS')} onMouseLeave={() => setHoveredIcon(null)} />
+                  {hoveredIcon === 'Tailwind CSS' && <span className="absolute top-full mt-2 text-sm text-black dark:text-themed-light font-ubuntu">{hoveredIcon}</span>}
                 </div>
                 <div className="relative flex flex-col items-center">
-                  <Image src={docker} alt="Docker" className="h-10 w-10 sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 filter grayscale dark:invert transition-transform duration-300 hover:scale-110" onMouseEnter={() => setHoveredIcon('Docker')} onMouseLeave={() => setHoveredIcon(null)} />
-                  {hoveredIcon === 'Docker' && <span className="absolute top-full mt-2 text-sm text-black dark:text-themed-light">{hoveredIcon}</span>}
+                  <Image src={docker} alt="Docker" className="h-10 w-10 sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 filter transition-transform duration-300 hover:scale-110" onMouseEnter={() => setHoveredIcon('Docker')} onMouseLeave={() => setHoveredIcon(null)} />
+                  {hoveredIcon === 'Docker' && <span className="absolute top-full mt-2 text-sm text-black dark:text-themed-light font-ubuntu">{hoveredIcon}</span>}
                 </div>
                 <div className="relative flex flex-col items-center">
-                  <Image src={mysql} alt="MySQL" className="h-10 w-10 sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 filter grayscale dark:invert transition-transform duration-300 hover:scale-110" onMouseEnter={() => setHoveredIcon('MySQL')} onMouseLeave={() => setHoveredIcon(null)} />
-                  {hoveredIcon === 'MySQL' && <span className="absolute top-full mt-2 text-sm text-black dark:text-themed-light">{hoveredIcon}</span>}
+                  <Image src={mysql} alt="MySQL" className="h-10 w-10 sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 filter transition-transform duration-300 hover:scale-110" onMouseEnter={() => setHoveredIcon('MySQL')} onMouseLeave={() => setHoveredIcon(null)} />
+                  {hoveredIcon === 'MySQL' && <span className="absolute top-full mt-2 text-sm text-black dark:text-themed-light font-ubuntu">{hoveredIcon}</span>}
                 </div>
               </div>
             </div>
@@ -238,7 +238,7 @@ export default function Home() {
 
 
         {/* Dev Work Section */}
-        <div id="Dev Work" className="px-5 md:px-20 gap-y-5 flex flex-col items-start justify-center min-h-screen max-w-screen-xl bg-neutral-100 dark:bg-themed-dark transition-colors ease-in-out duration-500">
+        <div id="Dev Work" className="px-5 pb-2 md:px-20 gap-y-5 flex flex-col items-start justify-center min-h-screen max-w-screen-xl bg-neutral-100 dark:bg-themed-dark transition-colors ease-in-out duration-500">
           <h2 className="pt-10 md:pb-2 text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl text-black dark:text-themed-light transition-colors ease-in-out duration-500">
               Developer Work
           </h2>
@@ -259,7 +259,11 @@ export default function Home() {
             {watchCards}
           </div>
           <h3 className="pt-10 pb-2 text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl text-black dark:text-themed-light transition-colors ease-in-out duration-500">Binary Clock</h3>
-          <p className="text-xs sm:text-xl md:text-xl xl:text-3xl 2xl:text-2xl text-black dark:text-themed-light mb-4">This is where I will put a brief explanation of what this clock is, how to read it, and how it works. I will put a popup modal here to actually show it in action and link to more info about these clocks</p>
+          <p className="text-xs sm:text-xl md:text-xl xl:text-3xl 2xl:text-2xl text-black dark:text-themed-light mb-4">
+            Below is a binary clock component I made a while ago purely for fun and to play around with JavaScript's abilities with the DOM. I always have though binary clocks are interesting and as a lover
+            of low-level programming, a binary themed way of telling time makes me geek out. Click anywhere on the card to learn more about binary clocks. 
+          </p>
+          <ClockCard />
         </div>
 
 
@@ -283,10 +287,10 @@ export default function Home() {
             The site is intended to be simple, clean, with a little bit of fun flair in the design in some places. No template was used for this site, it was built from scratch.
           </p>
           <div className="flex flex-row items-center justify-center w-full h-fit space-x-4 px-4 py-4">
-            <Image src={js}z alt="JavaScript" className="h-8 w-10 sm:h-9 sm:w-14 md:h-16 md:w-20 dark:rounded-sm transition-colors ease-in-out duration-500 px-1 invert dark:invert" />
-            <Image src={react} alt="tailwind" className="h-8 w-8 sm:h-9 sm:w-9 md:h-16 md:w-16 dark:rounded-sm transition-colors ease-in-out duration-500 dark:invert " />
-            <Image src={next} alt="next" className="h-8 w-10 sm:h-9 sm:w-14 md:h-16 md:w-20 dark:bg-themed-light dark:rounded-sm transition-colors ease-in-out duration-500 px-1" />
-            <Image src={tw} alt="tailwind" className="h-8 w-8 sm:h-9 sm:w-9 md:h-16 md:w-16 dark:bg-themed-light dark:rounded-sm transition-colors ease-in-out duration-500" />
+            <Image src={js}z alt="JavaScript" className="h-8 w-10 sm:h-9 sm:w-14 md:h-16 md:w-20 dark:rounded-sm transition-colors ease-in-out duration-500 px-1" />
+            <Image src={react} alt="tailwind" className="h-8 w-8 sm:h-9 sm:w-9 md:h-16 md:w-16 dark:rounded-sm transition-colors ease-in-out duration-500" />
+            <Image src={next} alt="next" className="h-8 w-8 sm:h-9 sm:w-9 md:h-16 md:w-16 dark:rounded-sm transition-colors ease-in-out duration-500 px-1" />
+            <Image src={tw} alt="tailwind" className="h-8 w-8 sm:h-9 sm:w-9 md:h-16 md:w-16 dark:rounded-sm transition-colors ease-in-out duration-500"/>
           </div>
           <div className="flex flex-row items-center justify-center w-full h-fit space-x-4 px-4 py-4">
             <button onClick={() => setShowModal(true)} className="flex flex-row items-center justify-center w-36 h-12 md:w-48 md:h-16 md:text-xl lg:w-52 lg:h-20 lg:text-2xl xl:w-56 xl:h-24 xl:text-3xl text-themed-light dark:text-black bg-neutral-900 dark:bg-themed-light hover:bg-neutral-500 rounded-xl shadow-md shadow-neutral-600 dark:shadow-black transition-colors ease-in-out duration-500">Changelog</button>

@@ -1,10 +1,9 @@
 import Image from "next/image";
+import handleNewTab from "../other/handleNewTab.js";
 
 export default function ProjectCard (props) {
 
-    const handleNewTab = () => {
-        window.open({link}, "_blank", "noopener", "noreferrer");
-    }
+
 
     function LangTab ({ size, color, lang }) {
         return (
@@ -35,12 +34,12 @@ export default function ProjectCard (props) {
         rounded-lg flex flex-col items-center overflow-hidden
         transition ease-in-out duration-500 shadow-md shadow-neutral-400 dark:shadow-black" key={props.key}>
             <div className="flex flex-col items-start justify-center py-8 px-2 sm:px-4 md:px-8 w-full " >
-                <div className="flex-1 px-2 w-full text-xs sm:text-sm md:text-lg">
+                <div className="flex flex-col px-2 w-full text-xs sm:text-sm md:text-lg gap-y-2">
                     <div className="flex flex-row gap-x-2 gap-y-2">
-                        <a href={props.link} className="dark:text-themed-light text-lg sm:text-sm md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-roboto font-bold">{props.title}</a>
+                        <h3 onClick={() => handleNewTab(`${props.link}`)} className="dark:text-themed-light text-lg sm:text-sm md:text-lg lg:text-xl xl:text-3xl 2xl:text-4xl font-roboto font-bold cursor-pointer select-none">{props.title}</h3>
                         <div className="ml-auto flex-shrink-0 flex flex-wrap justify-end px-2 sm:px-3 py-2 md:py-0 gap-x-2 gap-y-2">
                         {props.icons.map((icon, index) => (
-                            <Image key={index} src={icon} alt="" className="h-6 w-6 sm:h-8 sm:w-8 md:h-10 md:w-10 lg:h-10 lg:w-10 xl:h-10 xl:w-10 dark:invert dark:text-themed-light" />
+                            <Image key={index} src={icon} alt="" className="h-6 w-6 sm:h-8 sm:w-8 md:h-10 md:w-10 lg:h-10 lg:w-10 xl:h-10 xl:w-10 dark:text-themed-light" />
                         ))}
                         </div>
                     </div>
