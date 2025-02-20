@@ -13,9 +13,10 @@ module.exports = {
         ubuntu: ['Ubuntu', 'sans-serif'],
       },
       text: {
+        "2xs": "0.5rem",
         "5xl": "3rem",
         "6xl": "3.5rem",
-        "7xl": "4rem",
+        "7xl": "4rem"
       },
       colors: {
         "themed-light": "rgb(136, 173, 187)",
