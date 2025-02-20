@@ -19,7 +19,9 @@ module.exports = {
         "7xl": "4rem"
       },
       colors: {
+        "themed-neutral": "rgb(168, 195, 205)",
         "themed-light": "rgb(136, 173, 187)",
+        "themed-inv-light": "rgb(119, 82, 68)",
         "themed-dark": "rgb(18, 26, 34)",
         "themed-mid": "rgb(23, 47, 69)"
       },

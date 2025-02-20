@@ -111,7 +111,7 @@ export const Menu = ({ sections, containerId }) => {
             </ScrollLink>
           ))}
         </div>
-        <ThemeIcon />
+        {/* <ThemeIcon /> */}
           <motion.div
             className="absolute top-0 bottom-0 my-1 bg-black dark:bg-neutral-200 rounded-full transition-colors ease-in-out duration-500"
             layoutId="tab"

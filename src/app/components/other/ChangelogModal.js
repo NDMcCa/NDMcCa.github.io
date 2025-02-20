@@ -55,11 +55,11 @@ const Modal = ({ isShowing, hide }) => isShowing ? ReactDOM.createPortal(
                     Wow where to begin, almost everything has been changed into a new format. The site's tech stack remains the same, although I considered no longer using Tailwind as I have gotten better at vanilla CSS and realize how hard Tailwind class names can be to maintain.
                     The new style looks a bit cleaner and is more engaging while showing more detail and information than before. Expect more changes in the future as I continue to learn new things and improve my skills and change my mind on some of the styling.
                 </p>
-                <h3 className="text-sm md:text-lg 2xl:text-lg font-semibold mt-2 mb-1 md:mt-4 text-black dark:text-themed-light">2/XX/2025: </h3>
+                <h3 className="text-sm md:text-lg 2xl:text-lg font-semibold mt-2 mb-1 md:mt-4 text-black dark:text-themed-light">2/19/2025: </h3>
                 <p className="text-xs md:text-base 2xl:text-lg text-black dark:text-themed-light">
                     All of the styling with the exception of the nav bar at the top has been overhauled. The project cards have a language breakdown now included 
                     and a much more readable format. The home section is now mostly a componenet with a "contact card" which is sort of like a business card that looks a lot better than what was there before.
-                    The binary clock now has a new home and the watch faces have a much better display as well.
+                    The binary clock now has a new home and the watch faces have a much better display as well. Light mode has temporarily been disabled until a new color palatte for it is considered.
                 </p>
             </div>
             <button
