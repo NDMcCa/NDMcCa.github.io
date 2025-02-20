@@ -4,13 +4,13 @@ import Image from "next/image";
 import React, { useState } from "react";
 
 // DO NOT LISTEN TO THE LINTER HERE vvvvvvv
-import { Menu } from './components/menu.js';
-import BinClock from "./components/binClock.js";
+import { Menu } from './components/menu/menu.js';
+import BinClock from "./components/other/binClock.js";
 
 import IconTape from "./components/IconTape.js";
-import Modal from "./components/ChangelogModal.js";
+import Modal from "./components/other/ChangelogModal.js";
 
-import ProjectCard from './components/projectCard.js';
+import ProjectCard from './components/cards/projectCard.js';
 import projects from './components/data/projects.js';
 
 // import WatchCard from './components/watchCard.js';

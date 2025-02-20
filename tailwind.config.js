@@ -8,10 +8,22 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        roboto: ['Roboto', 'sans-serif'],
+        ubuntu: ['Ubuntu', 'sans-serif'],
+      },
       text: {
+        "2xs": "0.5rem",
         "5xl": "3rem",
         "6xl": "3.5rem",
-        "7xl": "4rem",
+        "7xl": "4rem"
+      },
+      colors: {
+        "themed-neutral": "rgb(168, 195, 205)",
+        "themed-light": "rgb(136, 173, 187)",
+        "themed-inv-light": "rgb(119, 82, 68)",
+        "themed-dark": "rgb(18, 26, 34)",
+        "themed-mid": "rgb(23, 47, 69)"
       },
       screens: {
         '3xl': '1920px',
@@ -32,13 +44,20 @@ module.exports = {
       },
       transitionTimingFunction: {
         "ease-in-out": "ease-in-out",
-      }
+      },
+      height: {
+        'expand': '130%', // Adjust this value as needed
+      },
+      transitionProperty: {
+        'height': 'height',
+      },
     },
   },
   variants: {
     extend: {
       maskImage: ['dark'],
       webkitMaskImage: ['dark'],
+      height: ['hover']
     },
   },
   plugins: [],

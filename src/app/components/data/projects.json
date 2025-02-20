@@ -1,10 +1,13 @@
 [
     {
-      "title": "'ndmcca.github.io' (this website)",
+      "title": "GitHub Pages Portfolio",
       "img": "",
       "description": "This website indeed is an actual project of mine, built from the ground up",
       "tags": "JavaScript, Tailwind CSS, Node.JS, React (Next.js), CI/CD Pipeline",
       "icons": "javascript react next tailwind",
+      "langs": "JavaScript CSS",
+      "percentages": "90 10",
+      "colors": "rgb(154,155,78) rgb(68,67,129)",
       "link": "https://github.com/NDMcCa/NDMcCa.github.io",
       "key": 1
     },
@@ -14,7 +17,10 @@
       "description": "A project I worked on in a software engineering course utilizing a given hardware facade developed in Java",
       "tags": "Java, JUnit 4, Git, IntelliJ IDEA, Software Architecture",
       "icons": "java",
-      "link": "https://github.com/kingsleyzhong/seng300-iteration3",
+      "langs": "Java",
+      "percentages": "100",
+      "colors": "orange",
+      "link": "https://github.com/NDMcCa/seng300-iteration3",
       "key": 2
     },
     {
@@ -23,16 +29,10 @@
       "description": "A mock ecommerce web application for buying, selling, and trading video games. Built with SvelteKit and TypeScript with a MySQL database containerized in Docker.",
       "tags": "Svelte, SvelteKit, TypeScript, SCSS, Docker, MySQL",
       "icons": "typescript svelte mysql docker",
+      "langs": "TypeScript Svelte Other",
+      "percentages": "52 38 10",
+      "colors": "rgb(0,113,179) orangered rgb(151,151,151)",
       "link": "https://github.com/NDMcCa/GameSwap--CPSC-471-Project-",
       "key": 3
-    },
-    {
-      "title": "Screenshot Deleter",
-      "img": "",
-      "description": "An executable Python script that runs to purge that pesky Windows screenshot folder that fills up over time.",
-      "tags": "Python, PyInstaller",
-      "icons": "python",
-      "link": "https://github.com/NDMcCa/Screenshot_Deleter",
-      "key": 4
     }
   ]
