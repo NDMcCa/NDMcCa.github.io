@@ -163,7 +163,7 @@ function startTime() {
 function BinClock() {
     useEffect(() => {startTime()});
     return (
-            <div className="bg-neutral-950 dark:bg-neutral-800 w-full sm:w-fit h-fit flex justify-center transition-colors ease-in-out duration-500 shadow-md shadow-neutral-400 dark:shadow-black">
+            <div className="bg-neutral-700 dark:bg-neutral-800 w-full sm:w-fit h-fit flex justify-center transition-colors ease-in-out duration-500 shadow-md shadow-neutral-400 dark:shadow-black">
                 <div className="hour-2 flex flex-col items-center justify-end p-2 gap-2">
                     <div className="rounded-full bg-neutral-950 w-6 h-6" id="h2-2"></div>
                     <div className="rounded-full bg-neutral-950 w-6 h-6" id="h1-2"></div>

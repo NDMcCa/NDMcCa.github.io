@@ -15,7 +15,7 @@
       "title": "Self-Checkout System",
       "img": "",
       "description": "A project I worked on in a software engineering course utilizing a given hardware facade developed in Java",
-      "tags": "Java, JUnit 4, Git, IntelliJ IDEA, Software Architecture",
+      "tags": "Java, JUnit 4, Git, IntelliJ IDEA",
       "icons": "java",
       "langs": "Java",
       "percentages": "100",
@@ -31,8 +31,20 @@
       "icons": "typescript svelte mysql docker",
       "langs": "TypeScript Svelte Other",
       "percentages": "52 38 10",
-      "colors": "rgb(0,113,179) orangered rgb(151,151,151)",
+      "colors": "#3178c6 orangered rgb(151,151,151)",
       "link": "https://github.com/NDMcCa/GameSwap--CPSC-471-Project-",
       "key": 3
+    },
+    {
+      "title": "TokenBase (WIP)",
+      "img": "",
+      "description": "A modular, AI-powered assistant platform that provides real-time chat, role-based access, and conversation tracking, designed for self-hosted or small organizational deployments.",
+      "tags": "Next.js, Golang, TypeScript, SCSS, Docker, SurrealDB, Ollama",
+      "icons": "typescript golang docker",
+      "langs": "TypeScript Go Dockerfile",
+      "percentages": "42 34 24",
+      "colors": "#3178c6 #00add8 #384d54",
+      "link": "https://github.com/connellr023/tokenbase",
+      "key": 4
     }
   ]

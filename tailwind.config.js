@@ -23,7 +23,9 @@ module.exports = {
         "themed-light": "rgb(136, 173, 187)",
         "themed-inv-light": "rgb(119, 82, 68)",
         "themed-dark": "rgb(18, 26, 34)",
-        "themed-mid": "rgb(23, 47, 69)"
+        "themed-mid": "rgb(23, 47, 69)",
+        "themed-teal": "#017F7C",
+        "themed-navy": "#304978"
       },
       screens: {
         '3xl': '1920px',

@@ -27,9 +27,9 @@ export const Menu = ({ sections, containerId }) => {
 
   const ThemeIcon = () => {
     if (theme === 'light') {
-      return <i className="fas fa-moon text-black dark:text-neutral-200 text-3xl sm:text-4xl cursor-pointer transition-colors ease-in-out duration-500" onClick={handleThemeChange} />;
+      return <i className="fas fa-moon text-neutral-100 dark:text-neutral-200 text-3xl sm:text-4xl cursor-pointer transition-colors ease-in-out duration-500" onClick={handleThemeChange} />;
     } else {
-      return <i className="fas fa-sun text-black dark:text-neutral-200 text-3xl sm:text-4xl cursor-pointer transition-colors ease-in-out duration-500" onClick={handleThemeChange} />;
+      return <i className="fas fa-sun text-neutral-100 dark:text-neutral-200 text-3xl sm:text-4xl cursor-pointer transition-colors ease-in-out duration-500" onClick={handleThemeChange} />;
     }
   }
 
@@ -92,7 +92,7 @@ export const Menu = ({ sections, containerId }) => {
   return (
     <div id={containerId} ref={containerRef}>
       <nav className="relative flex items-center justify-center w-full gap-1.5 px-2 md:gap-5">
-        <div className="flex items-center px-2 py-1 mx-2 outline outline-2 outline-black dark:outline-neutral-200 rounded-full w-fit transition-colors ease-in-out duration-500">
+        <div className="flex items-center px-2 py-1 mx-2 outline outline-2 outline-neutral-100 dark:outline-neutral-200 rounded-full w-fit transition-colors ease-in-out duration-500">
           {sections.map((section) => (
             <ScrollLink
               key={section.id}
@@ -113,7 +113,7 @@ export const Menu = ({ sections, containerId }) => {
         </div>
         {/* <ThemeIcon /> */}
           <motion.div
-            className="absolute top-0 bottom-0 my-1 bg-black dark:bg-neutral-200 rounded-full transition-colors ease-in-out duration-500"
+            className="absolute top-0 bottom-0 my-1 bg-neutral-100 dark:bg-neutral-200 rounded-full transition-colors ease-in-out duration-500"
             layoutId="tab"
             initial={false}
             animate={{
