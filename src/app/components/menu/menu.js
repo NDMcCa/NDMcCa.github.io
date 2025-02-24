@@ -2,27 +2,30 @@ import { useEffect, useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Link as ScrollLink, scroller } from 'react-scroll';
 
-export const Menu = ({ sections, containerId }) => {
+export const Menu = ({ sections, containerId, setTheme }) => {
   const [activeSection, setActiveSection] = useState('');
   const [tabWidth, setTabWidth] = useState(0);
   const [tabLeft, setTabLeft] = useState(0);
   const containerRef = useRef(null);
 
-  const [theme, setTheme] = useState('light');
+  const [theme, setThemeState] = useState('light');
 
   // Dark mode functionality
   useEffect(() => {
     if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      setThemeState('dark');
       setTheme('dark');
     }
-  }, []);
+  }, [setTheme]);
 
   useEffect(() => {
     theme === 'dark' ? document.documentElement.classList.add('dark') : document.documentElement.classList.remove('dark');
   }, [theme]);
 
   const handleThemeChange = () => {
-    theme === 'light' ? setTheme('dark') : setTheme('light');
+    const newTheme = theme === 'light' ? 'dark' : 'light';
+    setThemeState(newTheme);
+    setTheme(newTheme);
   }
 
   const ThemeIcon = () => {
@@ -111,7 +114,7 @@ export const Menu = ({ sections, containerId }) => {
             </ScrollLink>
           ))}
         </div>
-        {/* <ThemeIcon /> */}
+        <ThemeIcon />
           <motion.div
             className="absolute top-0 bottom-0 my-1 bg-neutral-100 dark:bg-neutral-200 rounded-full transition-colors ease-in-out duration-500"
             layoutId="tab"

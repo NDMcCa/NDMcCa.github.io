@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import { Menu } from './components/menu/menu.js';
 import Modal from "./components/other/ChangelogModal.js";
@@ -26,10 +26,36 @@ import mysql from "../../public/mysql.svg";
 import docker from "../../public/docker.svg";
 import golang from "../../public/golang.svg";
 
+// Dark mode logos
+import d_python from "../../public/dark/python-5-logo-svg-vector.svg";
+import d_java from "../../public/dark/java-14-logo-svg-vector.svg";
+import d_js from "../../public/dark/javascript.svg";
+import d_ts from "../../public/dark/typescript.svg";
+import d_cpp from "../../public/dark/cplusplus.svg";
+import d_c from "../../public/dark/C_Programming_Language.svg";
+import d_react from "../../public/dark/react.svg";
+import d_tw from "../../public/dark/tailwind-css-svgrepo-com.svg";
+import d_next from "../../public/dark/next.svg";
+import d_svelte from "../../public/dark/svelte.svg";
+import d_mysql from "../../public/dark/mysql.svg";
+import d_docker from "../../public/dark/docker.svg";
+import d_golang from "../../public/dark/golang.svg";
+
 export default function Home() {
 
   const [showModal, setShowModal] = useState(false);
   const [hoveredIcon, setHoveredIcon] = useState(null);
+  const [theme, setTheme] = useState('light');
+
+  useEffect(() => {
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      setTheme('dark');
+    }
+  }, []);
+
+  useEffect(() => {
+    theme === 'dark' ? document.documentElement.classList.add('dark') : document.documentElement.classList.remove('dark');
+  }, [theme]);
 
   const iconMap = {
     "python": python,
@@ -44,11 +70,24 @@ export default function Home() {
     "svelte": svelte,
     "mysql": mysql,
     "docker": docker,
-    "golang": golang
+    "golang": golang,
+    "python-dark": d_python,
+    "java-dark": d_java,
+    "javascript-dark": d_js,
+    "typescript-dark": d_ts,
+    "cplusplus-dark": d_cpp,
+    "c-dark": d_c,
+    "react-dark": d_react,
+    "tailwind-dark": d_tw,
+    "next-dark": d_next,
+    "svelte-dark": d_svelte,
+    "mysql-dark": d_mysql,
+    "docker-dark": d_docker,
+    "golang-dark": d_golang
   };
 
   const projectCards = projects.map((project, index) => {
-    const icons = project.icons.split(' ').map(iconName => iconMap[iconName.toLowerCase()]);
+    const icons = project.icons.split(' ').map(iconName => iconName.toLowerCase());
     const langs = project.langs.split(' ').map(lang => lang);
     const percentages = project.percentages.split(' ').map(percentage => parseInt(percentage));
     const colors = project.colors.split(' ');
@@ -62,6 +101,8 @@ export default function Home() {
       colors={colors}
       link={project.link}
       key={index}
+      iconMap={iconMap}
+      theme={theme}
     />
   });
 
@@ -89,7 +130,7 @@ export default function Home() {
       integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
       crossOrigin="anonymous" referrerPolicy="no-referrer" />
       <div className="fixed top-0 flex items-center justify-center w-full bg-neutral-950 dark:bg-neutral-800 h-fit py-3 transition-colors ease-in-out duration-500 z-50">
-        <Menu sections={sections} containerId="page" />
+        <Menu sections={sections} containerId="page" setTheme={setTheme} />
       </div>
       <div className="flex flex-col items-center justify-center h-fit w-screen pt-20">
 
@@ -125,7 +166,9 @@ export default function Home() {
 
             {/* Icons */}
             <div className="flex flex-col items-center justify-center gap-y-10 py-8">
-              <div className="flex flex-row flex-wrap items-center justify-center gap-4 sm:gap-6 md:gap-8 lg:gap-12">
+
+              {/* Light Mode */}
+              <div className="dark:hidden flex flex-row flex-wrap items-center justify-center gap-4 sm:gap-6 md:gap-8 lg:gap-12">
                 <div className="relative flex flex-col items-center">
                   <Image src={python} alt="Python 3" className="h-8 w-8 sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 filter transition-transform duration-300 hover:scale-110" onMouseEnter={() => setHoveredIcon('Python 3')} onMouseLeave={() => setHoveredIcon(null)} />
                   {hoveredIcon === 'Python 3' && <span className="absolute top-full mt-2 text-sm text-themed-navy dark:text-themed-light font-ubuntu">{hoveredIcon}</span>}
@@ -151,7 +194,7 @@ export default function Home() {
                   {hoveredIcon === 'C' && <span className="absolute top-full mt-2 text-sm text-themed-navy dark:text-themed-light font-ubuntu">{hoveredIcon}</span>}
                 </div>
               </div>
-              <div className="flex flex-row flex-wrap items-center justify-center gap-4 sm:gap-6 md:gap-8 lg:gap-12">
+              <div className="dark:hidden flex flex-row flex-wrap items-center justify-center gap-4 sm:gap-6 md:gap-8 lg:gap-12">
                 <div className="relative flex flex-col items-center">
                   <Image src={react} alt="React" className="h-8 w-8 sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 filter transition-transform duration-300 hover:scale-110" onMouseEnter={() => setHoveredIcon('React')} onMouseLeave={() => setHoveredIcon(null)} />
                   {hoveredIcon === 'React' && <span className="absolute top-full mt-2 text-sm text-themed-navy dark:text-themed-light font-ubuntu">{hoveredIcon}</span>}
@@ -174,6 +217,60 @@ export default function Home() {
                 </div>
                 <div className="relative flex flex-col items-center">
                   <Image src={mysql} alt="MySQL" className="h-8 w-8 sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 filter transition-transform duration-300 hover:scale-110" onMouseEnter={() => setHoveredIcon('MySQL')} onMouseLeave={() => setHoveredIcon(null)} />
+                  {hoveredIcon === 'MySQL' && <span className="absolute top-full mt-2 text-sm text-themed-navy dark:text-themed-light font-ubuntu">{hoveredIcon}</span>}
+                </div>
+              </div>
+
+              {/* Dark Mode */}
+              <div className="hidden dark:flex flex-row flex-wrap items-center justify-center gap-4 sm:gap-6 md:gap-8 lg:gap-12">
+                <div className="relative flex flex-col items-center">
+                  <Image src={d_python} alt="Python 3" className="h-8 w-8 sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 filter transition-transform duration-300 hover:scale-110" onMouseEnter={() => setHoveredIcon('Python 3')} onMouseLeave={() => setHoveredIcon(null)} />
+                  {hoveredIcon === 'Python 3' && <span className="absolute top-full mt-2 text-sm text-themed-navy dark:text-themed-light font-ubuntu">{hoveredIcon}</span>}
+                </div>
+                <div className="relative flex flex-col items-center">
+                  <Image src={d_java} alt="Java" className="h-8 w-8 sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 filter transition-transform duration-300 hover:scale-110" onMouseEnter={() => setHoveredIcon('Java')} onMouseLeave={() => setHoveredIcon(null)} />
+                  {hoveredIcon === 'Java' && <span className="absolute top-full mt-2 text-sm text-themed-navy dark:text-themed-light font-ubuntu">{hoveredIcon}</span>}
+                </div>
+                <div className="relative flex flex-col items-center">
+                  <Image src={d_js} alt="JavaScript" className="h-8 w-8 sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 filter transition-transform duration-300 hover:scale-110" onMouseEnter={() => setHoveredIcon('JavaScript')} onMouseLeave={() => setHoveredIcon(null)} />
+                  {hoveredIcon === 'JavaScript' && <span className="absolute top-full mt-2 text-sm text-themed-navy dark:text-themed-light font-ubuntu">{hoveredIcon}</span>}
+                </div>
+                <div className="relative flex flex-col items-center">
+                  <Image src={d_ts} alt="TypeScript" className="h-8 w-8 sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 filter transition-transform duration-300 hover:scale-110" onMouseEnter={() => setHoveredIcon('TypeScript')} onMouseLeave={() => setHoveredIcon(null)} />
+                  {hoveredIcon === 'TypeScript' && <span className="absolute top-full mt-2 text-sm text-themed-navy dark:text-themed-light font-ubuntu">{hoveredIcon}</span>}
+                </div>
+                <div className="relative flex flex-col items-center">
+                  <Image src={d_cpp} alt="C++" className="h-8 w-8 sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 filter transition-transform duration-300 hover:scale-110" onMouseEnter={() => setHoveredIcon('C++')} onMouseLeave={() => setHoveredIcon(null)} />
+                  {hoveredIcon === 'C++' && <span className="absolute top-full mt-2 text-sm text-themed-navy dark:text-themed-light font-ubuntu">{hoveredIcon}</span>}
+                </div>
+                <div className="relative flex flex-col items-center">
+                  <Image src={d_c} alt="C" className="h-8 w-8 sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 filter transition-transform duration-300 hover:scale-110" onMouseEnter={() => setHoveredIcon('C')} onMouseLeave={() => setHoveredIcon(null)} />
+                  {hoveredIcon === 'C' && <span className="absolute top-full mt-2 text-sm text-themed-navy dark:text-themed-light font-ubuntu">{hoveredIcon}</span>}
+                </div>
+              </div>
+              <div className="hidden dark:flex flex-row flex-wrap items-center justify-center gap-4 sm:gap-6 md:gap-8 lg:gap-12">
+                <div className="relative flex flex-col items-center">
+                  <Image src={d_react} alt="React" className="h-8 w-8 sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 filter transition-transform duration-300 hover:scale-110" onMouseEnter={() => setHoveredIcon('React')} onMouseLeave={() => setHoveredIcon(null)} />
+                  {hoveredIcon === 'React' && <span className="absolute top-full mt-2 text-sm text-themed-navy dark:text-themed-light font-ubuntu">{hoveredIcon}</span>}
+                </div>
+                <div className="relative flex flex-col items-center">
+                  <Image src={d_next} alt="Next.js" className="h-8 w-8 sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 filter transition-transform duration-300 hover:scale-110" onMouseEnter={() => setHoveredIcon('Next.js')} onMouseLeave={() => setHoveredIcon(null)} />
+                  {hoveredIcon === 'Next.js' && <span className="absolute top-full mt-2 text-sm text-themed-navy dark:text-themed-light font-ubuntu">{hoveredIcon}</span>}
+                </div>
+                <div className="relative flex flex-col items-center">
+                  <Image src={d_svelte} alt="Svelte" className="h-8 w-8 sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 filter transition-transform duration-300 hover:scale-110" onMouseEnter={() => setHoveredIcon('Svelte')} onMouseLeave={() => setHoveredIcon(null)} />
+                  {hoveredIcon === 'Svelte' && <span className="absolute top-full mt-2 text-sm text-themed-navy dark:text-themed-light font-ubuntu">{hoveredIcon}</span>}
+                </div>
+                <div className="relative flex flex-col items-center">
+                  <Image src={d_tw} alt="Tailwind CSS" className="h-8 w-8 sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 filter transition-transform duration-300 hover:scale-110" onMouseEnter={() => setHoveredIcon('Tailwind CSS')} onMouseLeave={() => setHoveredIcon(null)} />
+                  {hoveredIcon === 'Tailwind CSS' && <span className="absolute top-full mt-2 text-sm text-themed-navy dark:text-themed-light font-ubuntu">{hoveredIcon}</span>}
+                </div>
+                <div className="relative flex flex-col items-center">
+                  <Image src={d_docker} alt="Docker" className="h-8 w-8 sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 filter transition-transform duration-300 hover:scale-110" onMouseEnter={() => setHoveredIcon('Docker')} onMouseLeave={() => setHoveredIcon(null)} />
+                  {hoveredIcon === 'Docker' && <span className="absolute top-full mt-2 text-sm text-themed-navy dark:text-themed-light font-ubuntu">{hoveredIcon}</span>}
+                </div>
+                <div className="relative flex flex-col items-center">
+                  <Image src={d_mysql} alt="MySQL" className="h-8 w-8 sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 filter transition-transform duration-300 hover:scale-110" onMouseEnter={() => setHoveredIcon('MySQL')} onMouseLeave={() => setHoveredIcon(null)} />
                   {hoveredIcon === 'MySQL' && <span className="absolute top-full mt-2 text-sm text-themed-navy dark:text-themed-light font-ubuntu">{hoveredIcon}</span>}
                 </div>
               </div>
