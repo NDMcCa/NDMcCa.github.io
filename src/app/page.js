@@ -112,7 +112,7 @@ export default function Home() {
 
             {/* About */}        
             <p className="pt-10 text-xs sm:text-sm md:text-m lg:text-lg xl:text-xl 2xl:text-2xl text-themed-navy dark:text-themed-light transition-colors ease-in-out duration-500">
-              I am a software developer, designer, tech enthusiast, and 4th year Computer Science at the University of Calgary. I have a passion for creating and learning new things. I am always looking for new opportunities to grow and expand my skillset.
+              I am a software developer, designer, tech enthusiast, and graduate of BSc Computer Science at the University of Calgary, class of 2025. I have a passion for creating and learning new things. I am always looking for new opportunities to grow and expand my skillset.
             </p>
 
             {/* Dev Tech */}

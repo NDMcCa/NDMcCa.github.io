@@ -36,15 +36,51 @@
       "key": 3
     },
     {
-      "title": "TokenBase (WIP)",
+      "title": "TokenBase",
       "img": "",
       "description": "A modular, AI-powered assistant platform that provides real-time chat, role-based access, and conversation tracking, designed for self-hosted or small organizational deployments.",
-      "tags": "Next.js, Golang, TypeScript, SCSS, Docker, SurrealDB, Ollama",
+      "tags": "Next.js, Golang, TypeScript, SCSS, Docker, SurrealDB, Redis, Ollama",
       "icons": "typescript golang docker",
       "langs": "TypeScript Go Dockerfile",
       "percentages": "42 34 24",
       "colors": "#3178c6 #00add8 #384d54",
       "link": "https://github.com/connellr023/tokenbase",
       "key": 4
+    },
+    {
+      "title": "NFL Player Network Analysis",
+      "img": "",
+      "description": "A modular, AI-powered assistant platform that provides real-time chat, role-based access, and conversation tracking, designed for self-hosted or small organizational deployments.",
+      "tags": "Python (Jupyter Notebook), Networkx, Pandas, Numpy, Matplotlib, Seaborn",
+      "icons": "python",
+      "langs": "Jupyter",
+      "percentages": "100",
+      "colors": "#da5b0b",
+      "link": "https://github.com/SeanGwall/NFL-Network-Analysis",
+      "key": 5
+    },
+    {
+      "title": "Flight Delay Prediction Model",
+      "img": "",
+      "description": "A small AI regression model that predicts the delay component of a flight based of several parameters including aircraft, weather conditions, time, date, and destination. Trained on US BTS 2023 Civil Flights dataset sourced from Kaggle using a Huber loss function in TensorFlow.",
+      "tags": "Python, TensorFlow, Scikit-learn, Numpy, Pandas, Matplotlib",
+      "icons": "python",
+      "langs": "Python",
+      "percentages": "100",
+      "colors": "#3572a5",
+      "link": "",
+      "key": 6
+    },
+    {
+      "title": "Go-Bot (WIP)",
+      "img": "",
+      "description": "A small, experimental Discord Bot made for the purposes of getting accustomed to the Go languag as well as trying out different directions of functionality for Discord Bots in general.",
+      "tags": "Golang, discordgo",
+      "icons": "golang",
+      "langs": "Go",
+      "percentages": "100",
+      "colors": "#00add8",
+      "link": "https://github.com/NDMcCa/Go-Bot/blob/main/go.mod",
+      "key": 6
     }
   ]

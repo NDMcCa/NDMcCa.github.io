@@ -38,22 +38,22 @@ const ContactCard = () => {
                         <div className=" md:hidden flex flex-col h-full w-full items-center justify-center">
                             <ul className="md:hidden flex flex-col items-start justify-center gap-2 list-custom px-2 xl:px-0">
                                 <li className="flex flex-row">
-                                    <p className="font-ubuntu whitespace-nowrap text-sm sm:text-2xl text-themed-teal">
+                                    <p className="font-ubuntu whitespace-nowrap text-sm sm:text-2xl text-green-700">
                                         Software Developer
                                     </p>
                                 </li>
                                 <li className="flex flex-row">
-                                    <p className="font-ubuntu whitespace-nowrap text-sm sm:text-2xl text-themed-teal">
+                                    <p className="font-ubuntu whitespace-nowrap text-sm sm:text-2xl text-green-700">
                                         Designer
                                     </p>
                                 </li>
                                 <li className="flex flex-row">
-                                    <p className="font-ubuntu whitespace-nowrap text-sm sm:text-2xl text-themed-teal">
-                                        UofC CPSC Student
+                                    <p className="font-ubuntu whitespace-nowrap text-sm sm:text-2xl text-green-700">
+                                        UofC BSc CPSC Graduate
                                     </p>
                                 </li>
                                 <li className="flex flex-row">
-                                    <p className="font-ubuntu whitespace-nowrap text-sm sm:text-2xl text-themed-teal">
+                                    <p className="font-ubuntu whitespace-nowrap text-sm sm:text-2xl text-green-700">
                                         Tech Enthusiast
                                     </p>
                                 </li>
