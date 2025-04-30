@@ -25,7 +25,8 @@ import svelte from "../../public/svelte.svg";
 import mysql from "../../public/mysql.svg";
 import docker from "../../public/docker.svg";
 import golang from "../../public/golang.svg";
-
+import tensorflow from "../../public/tensorflow-svgrepo-com.svg";
+import networkx from "../../public/NetworkX.svg";
 export default function Home() {
 
   const [showModal, setShowModal] = useState(false);
@@ -44,7 +45,9 @@ export default function Home() {
     "svelte": svelte,
     "mysql": mysql,
     "docker": docker,
-    "golang": golang
+    "golang": golang,
+    "tensorflow": tensorflow,
+    "networkx": networkx
   };
 
   const projectCards = projects.map((project, index) => {
