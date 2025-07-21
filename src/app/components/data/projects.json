@@ -81,6 +81,18 @@
       "percentages": "100",
       "colors": "#00add8",
       "link": "https://github.com/NDMcCa/Go-Bot/blob/main/go.mod",
-      "key": 6
+      "key": 7
+    },    
+    {
+      "title": "File Janitor",
+      "img": "",
+      "description": "A small, intuitive WinForms .NET app that is helpful in managing and deleting files primarily based on file extension.",
+      "tags": "C#, .NET, WinForms",
+      "icons": "csharp",
+      "langs": "C#",
+      "percentages": "100",
+      "colors": "#178600",
+      "link": "https://github.com/NDMcCa/File-Janitor",
+      "key": 8
     }
   ]

@@ -18,6 +18,7 @@ import js from "../../public/javascript.svg";
 import ts from "../../public/typescript.svg";
 import cpp from "../../public/cplusplus.svg";
 import c from "../../public/C_Programming_Language.svg";
+import csharp from "../../public/icons8-c-sharp-logo.svg";
 import react from "../../public/react.svg";
 import tw from "../../public/tailwind-css-svgrepo-com.svg";
 import next from "../../public/next.svg";
@@ -39,6 +40,7 @@ export default function Home() {
     "typescript": ts,
     "cplusplus": cpp,
     "c": c,
+    "csharp": csharp,
     "react": react,
     "tailwind": tw,
     "next": next,
@@ -150,8 +152,8 @@ export default function Home() {
                   {hoveredIcon === 'C++' && <span className="absolute top-full mt-2 text-sm text-themed-navy dark:text-themed-light font-ubuntu">{hoveredIcon}</span>}
                 </div>
                 <div className="relative flex flex-col items-center">
-                  <Image src={c} alt="C" className="h-8 w-8 sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 filter transition-transform duration-300 hover:scale-110" onMouseEnter={() => setHoveredIcon('C')} onMouseLeave={() => setHoveredIcon(null)} />
-                  {hoveredIcon === 'C' && <span className="absolute top-full mt-2 text-sm text-themed-navy dark:text-themed-light font-ubuntu">{hoveredIcon}</span>}
+                  <Image src={csharp} alt="C#" className="h-8 w-8 sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 filter transition-transform duration-300 hover:scale-110" onMouseEnter={() => setHoveredIcon('C#')} onMouseLeave={() => setHoveredIcon(null)} />
+                  {hoveredIcon === 'C#' && <span className="absolute top-full mt-2 text-sm text-themed-navy dark:text-themed-light font-ubuntu">{hoveredIcon}</span>}
                 </div>
               </div>
               <div className="flex flex-row flex-wrap items-center justify-center gap-4 sm:gap-6 md:gap-8 lg:gap-12">
