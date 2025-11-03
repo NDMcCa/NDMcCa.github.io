@@ -44,7 +44,7 @@ const ContactCard = () => {
                                 </li>
                                 <li className="flex flex-row">
                                     <p className="font-ubuntu whitespace-nowrap text-sm sm:text-2xl text-green-700">
-                                        Designer
+                                        Outdoorsman
                                     </p>
                                 </li>
                                 <li className="flex flex-row">
@@ -104,12 +104,12 @@ const ContactCard = () => {
                     </li>
                     <li className="flex flex-row">
                         <p className="font-ubuntu whitespace-nowrap text-sm sm:text-xl lg:text-2xl text-themed-teal">
-                            Designer
+                            Outdoorsman
                         </p>
                     </li>
                     <li className="flex flex-row">
                         <p className="font-ubuntu whitespace-nowrap text-sm sm:text-xl lg:text-2xl text-themed-teal">
-                            UofC CPSC Student
+                            UofC BSc CPSC Graduate
                         </p>
                     </li>
                     <li className="flex flex-row">

@@ -28,6 +28,7 @@ import docker from "../../public/docker.svg";
 import golang from "../../public/golang.svg";
 import tensorflow from "../../public/tensorflow-svgrepo-com.svg";
 import networkx from "../../public/NetworkX.svg";
+import expo from "../../public/expo.svg";
 export default function Home() {
 
   const [showModal, setShowModal] = useState(false);
@@ -49,7 +50,8 @@ export default function Home() {
     "docker": docker,
     "golang": golang,
     "tensorflow": tensorflow,
-    "networkx": networkx
+    "networkx": networkx,
+    "expo": expo
   };
 
   const projectCards = projects.map((project, index) => {
@@ -204,7 +206,7 @@ export default function Home() {
           <h2 className="pt-10 pb-2 text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl text-themed-navy dark:text-themed-light transition-colors ease-in-out duration-500">Creations</h2>
           <h3 className="pt-6 pb-2 text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl text-themed-navy dark:text-themed-light transition-colors ease-in-out duration-500">WearOS Watch Faces</h3>
           <p className="text-xs sm:text-xl md:text-xl xl:text-3xl 2xl:text-2xl text-themed-navy dark:text-themed-light mb-4">I have created a few watch faces for the Wear OS platform. I have always been interested in the idea of creating a watch face and I have been able to create a few that I am proud of.</p>
-          <p className="text-xs sm:text-xl md:text-xl xl:text-3xl 2xl:text-2xl text-themed-navy dark:text-themed-light mb-4">To date, I have only created watch faces using Watch Face Studio, although I am looking to expand my knowledge of Android Studio which would enable me to create more complex watch faces in the future.</p>
+          <p className="text-xs sm:text-xl md:text-xl xl:text-3xl 2xl:text-2xl text-themed-navy dark:text-themed-light mb-4">To date, I have only created watch faces using Watch Face Studio, although I am looking to expand my knowledge of Android Studio which would enable me to create more complex watch faces in the future (despite being possible, apparently not the easiest thing to do anymore).</p>
           <div className="pt-8 gap-y-5 flex flex-col items-center justify-center max-w-screen-xl bg-neutral-200 dark:bg-themed-dark transition-colors ease-in-out duration-500">
             {watchCards}
           </div>
@@ -220,7 +222,20 @@ export default function Home() {
         {/* About Site Section */}
         <section id='About' className="px-10 md:px-20 gap-y-4 flex flex-col items-start max-w-screen-xl bg-neutral-200 dark:bg-themed-dark transition-colors ease-in-out duration-500 py-8">
           <h2 className="pt-10 pb-2 text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl text-themed-navy dark:text-themed-light transition-colors ease-in-out duration-500">About this Site</h2>
-          <h3 className="pb-2 text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl text-themed-navy dark:text-themed-light transition-colors ease-in-out duration-500">The Tech</h3>
+          <h3 className="pb-2 text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl text-themed-navy dark:text-themed-light transition-colors ease-in-out duration-500">The Person</h3>
+          <p className="text-sm sm:text-xl md:text-2xl text-themed-navy dark:text-themed-light transition-colors ease-in-out duration-500">
+            This is the part where I share a little bit about who I am. Most of my hobbies revolve around the outdoors. I am an avid, and now decently experienced hiker... experienced is a title I can give myself after pushing myself beyond my limits on Cascade Mountain in Banff National Park.
+            I also have done several backpacking treks in the mountains including a couple multi-night trips. There really is a certain peace and clarity you get when you're out in the wild, away from cell reception (I used to hate that part, but go looking for it now).
+            I hope to do the West Coast Trail at some point now. I have also been trying to learn how to boulder and top rope climb, although I have a long way to go with that. In the future I am looking to add fishing and skiing to the list of my outdoor hobbies.
+          </p>
+          <p className="text-sm sm:text-xl md:text-2xl text-themed-navy dark:text-themed-light transition-colors ease-in-out duration-500">
+            I also love to travel, I know everyone says this, but I actually mean it. Again, this often includes some aspect of outdoors, but I also like travelling to different cities to see what they offer. I have been to 4 countries outside of Canada, 25 US states, and plan to add more to that list. 
+            I really enjoy travelling with friends and family, but I learned more recently that solo-travelling to a foreign country you have never been to before where English is not the mother tongue is a life changing experience and is something I definitely recommend.
+          </p>
+          <p className="text-sm sm:text-xl md:text-2xl text-themed-navy dark:text-themed-light transition-colors ease-in-out duration-500">
+            I also love electronics, aviation, cars, and any combination of these things. 
+          </p>
+          <h3 className="pt-10 pb-2 text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl text-themed-navy dark:text-themed-light transition-colors ease-in-out duration-500">The Tech</h3>
           <p className="text-sm sm:text-xl md:text-2xl text-themed-navy dark:text-themed-light transition-colors ease-in-out duration-500">
             This site was build in React/Next.js and uses the Tailwind CSS to provide a responsive UI. The site is hosted on GitHub Pages and deployed through a GitHub Actions CI/CD Pipeline; it is subject to the limitations of that platform.
             </p>
