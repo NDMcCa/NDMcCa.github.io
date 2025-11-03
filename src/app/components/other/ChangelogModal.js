@@ -61,6 +61,10 @@ const Modal = ({ isShowing, hide }) => isShowing ? ReactDOM.createPortal(
                     and a much more readable format. The home section is now mostly a componenet with a "contact card" which is sort of like a business card that looks a lot better than what was there before.
                     The binary clock now has a new home and the watch faces have a much better display as well. Light mode has temporarily been disabled until a new color palatte for it is considered.
                 </p>
+                <h3 className="text-sm md:text-lg 2xl:text-lg font-semibold mt-2 mb-1 md:mt-4 text-black dark:text-themed-light">11/2/2025: </h3>
+                <p className="text-xs md:text-base 2xl:text-lg text-black dark:text-themed-light">
+                    Some personal details have been updated, apparently I did not do that correctly before in one particular case. Also added some new background info about myself at the bottom of the page, out of the way of the more important stuff.
+                </p>
             </div>
             <button
                 className="bg-red-500 hover:bg-red-800 hover:scale-105 text-white font-bold py-2 px-4 rounded transition ease-in-out duration-500 w-1/2 self-center"
